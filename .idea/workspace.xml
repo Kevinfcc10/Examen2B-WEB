@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ee5e805-2dd2-421e-ac35-d072509f372e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/controladores/autorizacion.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/controladores/autorizacion.controller.ts" afterDir="false" />
-    </list>
+    <list default="true" id="5ee5e805-2dd2-421e-ac35-d072509f372e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,7 +13,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="paciente.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paciente.schema.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.schema.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paciente.controller.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,13 +69,13 @@
         <option value="$PROJECT_DIR$/project/src/exceptions/peticion-notFound.exception.ts" />
         <option value="$PROJECT_DIR$/project/src/pipes/paciente.pipe.ts" />
         <option value="$PROJECT_DIR$/project/src/pipes/medicamento.pipe.ts" />
-        <option value="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" />
         <option value="$PROJECT_DIR$/project/src/medicamentos/medicamento.controller.ts" />
-        <option value="$PROJECT_DIR$/project/src/paciente/paciente.schema.ts" />
         <option value="$PROJECT_DIR$/project/src/exceptions/peticion-incorrecta.exception.ts" />
         <option value="$PROJECT_DIR$/project/src/app.module.ts" />
-        <option value="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" />
         <option value="$PROJECT_DIR$/project/src/controladores/autorizacion.controller.ts" />
+        <option value="$PROJECT_DIR$/project/src/paciente/paciente.schema.ts" />
+        <option value="$PROJECT_DIR$/project/src/paciente/paciente.controller.ts" />
+        <option value="$PROJECT_DIR$/project/src/paciente/paciente.service.ts" />
       </list>
     </option>
   </component>
@@ -172,7 +200,7 @@
       <workItem from="1527982326808" duration="1357000" />
       <workItem from="1527999501807" duration="7978000" />
       <workItem from="1528035182019" duration="9124000" />
-      <workItem from="1528045357482" duration="21612000" />
+      <workItem from="1528045357482" duration="22305000" />
     </task>
     <task id="LOCAL-00001" summary="Literal 1 - Examen / solo para Paciente">
       <created>1527883569154</created>
@@ -202,24 +230,31 @@
       <option name="project" value="LOCAL" />
       <updated>1528050107426</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Literal 4y5 - Examen / Controlador(Autorizacion) y cookie completado">
+      <created>1528068745797</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1528068745798</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60670000" />
+    <option name="totallyTimeSpent" value="61363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20661765" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20661765" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50147057" side_tool="true" weight="0.3036566" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4985294" visible="true" weight="0.22893482" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4985294" visible="true" weight="0.2845787" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -242,7 +277,8 @@
     <MESSAGE value="Literal 1 - Examen / terminado" />
     <MESSAGE value="Literal 2y3 - Examen / Pipes con BadRequest" />
     <MESSAGE value="Literal 2y3 - Examen / Pipes y Exception Terminado con BadRequest y NotFound" />
-    <option name="LAST_COMMIT_MESSAGE" value="Literal 2y3 - Examen / Pipes y Exception Terminado con BadRequest y NotFound" />
+    <MESSAGE value="Literal 4y5 - Examen / Controlador(Autorizacion) y cookie completado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Literal 4y5 - Examen / Controlador(Autorizacion) y cookie completado" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.controller.ts">
@@ -360,13 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/exceptions/peticion-incorrecta.exception.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -377,20 +406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.schema.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/controladores/autorizacion.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -398,16 +413,6 @@
           <folding>
             <element signature="e#971#1248#0" />
             <element signature="e#1166#1242#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235">
-          <caret line="42" column="70" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -435,6 +440,37 @@
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/exceptions/peticion-incorrecta.exception.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.schema.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/paciente/paciente.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
