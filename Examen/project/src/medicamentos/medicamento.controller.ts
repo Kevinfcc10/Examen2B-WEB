@@ -11,7 +11,7 @@ export class MedicamentoController {
     }
 
     //Body params
-    @Post('crear')
+    @Post()
     crearMedicamento(@Body(new MedicamentoPipe(MEDICAMENTO_SCHEMA)) bodyParams){
         const medicamento1 = new  Medicamento(
             bodyParams.gramosAIngerir,
@@ -27,7 +27,7 @@ export class MedicamentoController {
 
     }
 
-    @Get('listar')
+    @Get()
     listarTodosLosMedicamentos(@Res () response, @Req () request){
         var arregloMedicamentos = this.medicamentoService.listarMedicamento();
         if(Object.keys(arregloMedicamentos).length === 0){

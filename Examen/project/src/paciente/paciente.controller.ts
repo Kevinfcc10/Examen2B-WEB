@@ -11,7 +11,7 @@ export  class PacienteController {
 
     }
     //Body params
-    @Post('crear') //uso pipe
+    @Post() //uso pipe
     crearPaciente(@Body(new PacientePipe(PACIENTE_SCHEMA)) bodyParams) {
             const paciente1 = new Paciente(
                 bodyParams.nombres,
@@ -23,7 +23,7 @@ export  class PacienteController {
             return this.pacienteService.crearPaciente(paciente1);
     }
 
-    @Get('listar')
+    @Get()
     listarTodosLosPaciente(@Res () response, @Req () request){
         var arregloPacientes = this.pacienteService.listarPaciente();
         if(Object.keys(arregloPacientes).length === 0){

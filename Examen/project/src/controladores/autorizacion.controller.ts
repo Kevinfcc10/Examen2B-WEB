@@ -22,8 +22,8 @@ export class AutorizacionController {
                 };
                 response.cookie(parametros.nombreCookie,parametros.valorCookie);
                 console.log(headers);
-                return response.send({mensaje:'ok'});
-                //return response.send({mensaje:'ok',  cookie: headers.cookie});
+                //return response.send({mensaje:'ok'});
+                return response.send({mensaje:'ok',  cookie: headers.cookie});
             }
             else {
                 if(usuario!=='adrianeguez'){
@@ -52,8 +52,8 @@ export class AutorizacionController {
         //response.clearCookie('token');
         //console.log(parametros.valorCookie)
         response.cookie(parametros.nombreCookie,parametros.valorCookie);
-        //return response.send({mensaje: 'Usted salio del sistema', cookie: headers.cookie});
-        return response.send({mensaje: 'Usted salio del sistema'});
+        return response.send({mensaje: 'Usted salio del sistema', cookie: headers.cookie});
+        //return response.send({mensaje: 'Usted salio del sistema'});
     }
 
 
