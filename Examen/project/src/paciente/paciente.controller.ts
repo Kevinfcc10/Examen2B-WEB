@@ -11,7 +11,7 @@ export  class PacienteController {
 
     }
     //Body params
-    @Post() //uso pipe
+    @Post('registrar') //uso pipe
     crearPaciente(@Body(new PacientePipe(PACIENTE_SCHEMA)) bodyParams) {
             const paciente1 = new Paciente(
                 bodyParams.nombres,
@@ -19,23 +19,47 @@ export  class PacienteController {
                 bodyParams.fechaNacimiento,
                 bodyParams.hijos,
                 bodyParams.tieneSeguro,
+                bodyParams.usuarioFKIdUsuario,
             );
             return this.pacienteService.crearPaciente(paciente1);
     }
 
-    @Get()
-    listarTodosLosPaciente(@Res () response, @Req () request){
-        var arregloPacientes = this.pacienteService.listarPaciente();
-        if(Object.keys(arregloPacientes).length === 0){
-            return response.send({
-                mensaje:'No existe ningun paciente',
-                estado: HttpStatus.NOT_FOUND + ' Not found',
-            });
-        } else{
-            return response.status(202).send(arregloPacientes);
-        }
-        //return response.status(202).send(this.pacienteService.listarPaciente());
+    @Get('crearPacientes')
+    registrarAllPacientes(@Res () response, @Req () request){
+        this.pacienteService.crearTodosPacientes()
+        return response.status(202).send('Pacientes Creados');
     }
+
+    @Get('mostrarPacientes')
+    listarTodosLosPaciente(@Res () response, @Req () request){
+        var promise = Promise.resolve(this.pacienteService.listarPaciente());
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No existe ningun paciente',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }
+            else{
+                return response.status(202).send(value);
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @Get('/:id')

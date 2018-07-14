@@ -8,5 +8,5 @@ export const MEDICAMENTO_SCHEMA = Joi
         usadoPara:Joi.string().regex(/^[a-zA-Z,.' ' ]{4,50}$/).required(),
         fechaCaducidad:Joi.date().required(),
         numeroPastillas:Joi.number().integer().required(),
-        pacienteId:Joi.number().integer().required(),
+        pacienteIdIdPaciente:Joi.number().integer().required(),
     });

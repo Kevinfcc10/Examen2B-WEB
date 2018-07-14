@@ -7,6 +7,5 @@ export const PACIENTE_SCHEMA = Joi
         fechaNacimiento:Joi.date().required(),
         hijos:Joi.number().integer().min(0).max(8).required(),
         tieneSeguro:Joi.boolean().required(),
-        usuarioFK: Joi.number(),
-        medicamentoFK: Joi.number(),
+        usuarioFKIdUsuario: Joi.number().integer().required(),
     });

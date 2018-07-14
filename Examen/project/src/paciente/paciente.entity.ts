@@ -21,11 +21,11 @@ export class PacienteEntity {
     @ManyToOne(
         type => UsuarioEntity,
         pacienteEntity => pacienteEntity.pacienteId)
-    usuarioFK: UsuarioEntity;
+    usuarioFK: number;
 
     @OneToMany(
         type => MedicamentoEntity,
         pacienteEntity => pacienteEntity.pacienteId)
-    medicamentoId: MedicamentoEntity;
+    medicamentoId: number;
 
 }

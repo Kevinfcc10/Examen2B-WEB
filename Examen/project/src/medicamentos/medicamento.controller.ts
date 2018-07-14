@@ -11,7 +11,7 @@ export class MedicamentoController {
     }
 
     //Body params
-    @Post()
+    @Post('registrar')
     crearMedicamento(@Body(new MedicamentoPipe(MEDICAMENTO_SCHEMA)) bodyParams){
         const medicamento1 = new  Medicamento(
             bodyParams.gramosAIngerir,
@@ -20,26 +20,43 @@ export class MedicamentoController {
             bodyParams.usadoPara,
             bodyParams.fechaCaducidad,
             bodyParams.numeroPastillas,
-            bodyParams.pacienteId,
+            bodyParams.pacienteIdIdPaciente,
         );
 
         return this.medicamentoService.crearMedicamento(medicamento1);
 
     }
 
-    @Get()
-    listarTodosLosMedicamentos(@Res () response, @Req () request){
-        var arregloMedicamentos = this.medicamentoService.listarMedicamento();
-        if(Object.keys(arregloMedicamentos).length === 0){
-            return response.send({
-                mensaje:'No existe ningun medicamento',
-                estado: HttpStatus.NOT_FOUND + ' Not found',
-            });
-        } else{
-            return response.status(202).send(arregloMedicamentos);
-        }
-        //return response.status(202).send(this.medicamentoService.listarMedicamento());
+    @Get('crearMedicamentos')
+    registrarAllMedicamentos(@Res () response, @Req () request){
+        this.medicamentoService.crearTodosMedicamentos()
+        return response.status(202).send('Medicamentos Creados');
     }
+
+    @Get('mostrarMedicamentos')
+    listarTodosLosMedicamentos(@Res () response, @Req () request){
+        var promise = Promise.resolve(this.medicamentoService.listarMedicamento())
+
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No existe ningun medicamento',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }
+            else{
+                return response.status(202).send(value);
+            }
+        });
+    }
+
+
+
+
+
+
+
+
 
     @Get('/:id')
     mostrarUnMedicamento(@Res () response, @Req () request, @Param() params){

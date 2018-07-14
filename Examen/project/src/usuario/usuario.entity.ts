@@ -13,7 +13,7 @@ export class UsuarioEntity {
     @OneToMany(
         type => PacienteEntity,
         usuarioEntity => usuarioEntity.usuarioFK)
-    pacienteId: PacienteEntity;
+    pacienteId: number;
 
 
 }

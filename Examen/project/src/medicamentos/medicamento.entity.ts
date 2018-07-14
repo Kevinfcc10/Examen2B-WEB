@@ -15,7 +15,7 @@ export class MedicamentoEntity {
     @Column()
     usadoPara: string;
     @Column()
-    fechaCaducidad: string;
+    fechaCaducidad: Date;
     @Column()
     numeroPastillas: number;
 
@@ -23,6 +23,6 @@ export class MedicamentoEntity {
     @ManyToOne(
         type => PacienteEntity,
         medicamentoEntity => medicamentoEntity.medicamentoId)
-    pacienteId: PacienteEntity;
+    pacienteId: number;
 
 }
