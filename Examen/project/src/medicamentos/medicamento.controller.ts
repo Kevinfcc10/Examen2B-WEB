@@ -12,7 +12,7 @@ export class MedicamentoController {
 
     //Body params
     @Post('registrar')
-    crearMedicamento(@Body(new MedicamentoPipe(MEDICAMENTO_SCHEMA)) bodyParams){
+    crearMedicamento(@Body(new MedicamentoPipe(MEDICAMENTO_SCHEMA)) bodyParams, @Res () response){
         const medicamento1 = new  Medicamento(
             bodyParams.gramosAIngerir,
             bodyParams.nombre,
@@ -23,7 +23,8 @@ export class MedicamentoController {
             bodyParams.pacienteIdIdPaciente,
         );
 
-        return this.medicamentoService.crearMedicamento(medicamento1);
+        this.medicamentoService.crearMedicamento(medicamento1);
+        return response.send('Medicamento Registrado');
 
     }
 

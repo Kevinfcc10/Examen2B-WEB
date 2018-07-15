@@ -12,7 +12,7 @@ export  class PacienteController {
     }
     //Body params
     @Post('registrar') //uso pipe
-    crearPaciente(@Body(new PacientePipe(PACIENTE_SCHEMA)) bodyParams) {
+    crearPaciente(@Body(new PacientePipe(PACIENTE_SCHEMA)) bodyParams, @Res () response) {
             const paciente1 = new Paciente(
                 bodyParams.nombres,
                 bodyParams.apellidos,
@@ -21,7 +21,9 @@ export  class PacienteController {
                 bodyParams.tieneSeguro,
                 bodyParams.usuarioFKIdUsuario,
             );
-            return this.pacienteService.crearPaciente(paciente1);
+            this.pacienteService.crearPaciente(paciente1);
+
+            return response.send('Paciente Registrado');
     }
 
     @Get('crearPacientes')

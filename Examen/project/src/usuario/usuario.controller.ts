@@ -1,4 +1,4 @@
-import {Body, Controller, Get, HttpStatus, Post, Req, Res} from "@nestjs/common";
+import {Body, Controller, Get, HttpStatus, Param, Post, Req, Res} from "@nestjs/common";
 import {Usuario, UsuarioService} from "./usuario.service";
 import {PacientePipe} from "../pipes/paciente.pipe";
 import {PACIENTE_SCHEMA} from "../paciente/paciente.schema";
@@ -35,11 +35,31 @@ export class UsuarioController {
     }
 
     @Post('registrar')
-    registrarUsuario(@Body(new UsuarioPipe(USUARIO_SCHEMA)) bodyParams){
+    registrarUsuario(@Body(new UsuarioPipe(USUARIO_SCHEMA)) bodyParams, @Res () response){
         const usuario = new Usuario(
             bodyParams.nombre_usuario,
             bodyParams.password_usuario
         );
-        return this.usuarioService.crearUsuario(usuario);
+        this.usuarioService.crearUsuario(usuario);
+        return response.send('Usuario Registrado');
+    }
+
+    @Get('/:name')
+    mostrarUsuario(@Res () response, @Req () request, @Param() params){
+        this.usuarioService.buscarUsuarioNombre(params.name);
+
+        /*let arregloUsuario = this.usuarioService.buscarUsuarioNombre(params.name);
+        if(arregloUsuario){
+            return response.send(arregloUsuario);
+        } else{
+            console.log('no encontrado');
+            return response.status(400).send({
+                mensaje:'Paciente no encontrado',
+                estado:HttpStatus.NOT_FOUND + ' Not found',
+                URL:request.originalUrl,
+                //cabeceras: request.headers,
+            });
+        }*/
+        return response.send('encontrado');
     }
 }

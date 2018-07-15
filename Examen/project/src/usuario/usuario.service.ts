@@ -1,6 +1,6 @@
 import {Component, Req, Res} from "@nestjs/common";
 import {InjectConnection, InjectEntityManager, InjectRepository} from "@nestjs/typeorm";
-import {Connection, EntityManager, Repository} from "typeorm";
+import {Connection, EntityManager, getRepository, Like, Repository} from "typeorm";
 import {UsuarioEntity} from "./usuario.entity";
 import {UsuarioData} from "./usuario.data";
 import {Paciente} from "../paciente/paciente.service";
@@ -30,7 +30,6 @@ export class UsuarioService {
         this.usuarioRepository.save(user);
     }
 
-
     crearTodosUsuarios(){
 
         for (var indice in UsuarioData){
@@ -44,6 +43,17 @@ export class UsuarioService {
 
         }
     }
+
+    async buscarUsuarioNombre(name: string): Promise<UsuarioEntity[]> {
+
+        console.log(name.toString());
+        await this.usuarioRepository.find({nombre_usuario:Like("%"+name+"%")}).then(function (value) {
+            console.log(value);
+        });
+        return (await this.usuarioRepository.find({nombre_usuario:Like("%"+name+"%")}));
+    }
+
+
 }
 
 export class Usuario {
