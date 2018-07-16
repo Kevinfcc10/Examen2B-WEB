@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-medicamento',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicamentoComponent implements OnInit {
 
+  @Input() imagen: string;
+  @Input() texto: string;
+  @Output() selecciono: EventEmitter<string> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  seleccionoMed() {
+    console.log('Selecciono', this.texto);
+    this.selecciono.emit(this.texto);
   }
 
 }

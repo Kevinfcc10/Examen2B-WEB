@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ee5e805-2dd2-421e-ac35-d072509f372e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/assets/lupa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/assets/perfil1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/assets/perfil2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/assets/perfil3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/assets/perfil4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2009">
-              <caret line="126" column="62" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
+            <state relative-caret-position="-488">
+              <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -56,6 +41,33 @@
                 <element signature="n#Medicamentos#0" />
                 <element signature="n#Usuarios#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usuario.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="20" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="medicamento.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="50" selection-start-column="50" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="medicamento.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -80,10 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/project/src/exceptions/peticion-notFound.exception.ts" />
-        <option value="$PROJECT_DIR$/project/src/pipes/paciente.pipe.ts" />
-        <option value="$PROJECT_DIR$/project/src/pipes/medicamento.pipe.ts" />
-        <option value="$PROJECT_DIR$/project/src/medicamentos/medicamento.controller.ts" />
         <option value="$PROJECT_DIR$/project/src/exceptions/peticion-incorrecta.exception.ts" />
         <option value="$PROJECT_DIR$/project/src/app.module.ts" />
         <option value="$PROJECT_DIR$/project/src/paciente/paciente.schema.ts" />
@@ -110,8 +118,6 @@
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/index.html" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.html" />
-        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.html" />
-        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.html" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/seleccion/seleccion.component.html" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/peticion/peticion.component.html" />
@@ -121,7 +127,6 @@
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.css" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.css" />
-        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.html" />
         <option value="$PROJECT_DIR$/Examen/project/src/usuario/usuario.service.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/usuario/usuario.controller.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/paciente/paciente.service.ts" />
@@ -129,8 +134,15 @@
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.service.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.controller.ts" />
-        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.css" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.ts" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.html" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.html" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.css" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.html" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.ts" />
       </list>
     </option>
   </component>
@@ -316,31 +328,55 @@
             <path>
               <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="examenFront" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="examenFront" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="examenFront" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="medicamentos" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
               <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="examenFront" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="paciente" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="examenFront" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="medicamento" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="examenFront" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="usuario" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -408,7 +444,7 @@
       <workItem from="1531585516454" duration="10156000" />
       <workItem from="1531619427520" duration="66687000" />
       <workItem from="1531707972190" duration="106000" />
-      <workItem from="1531741557416" duration="4510000" />
+      <workItem from="1531741557416" duration="5681000" />
     </task>
     <task id="LOCAL-00001" summary="Literal 1 - Examen / solo para Paciente">
       <created>1527883569154</created>
@@ -484,20 +520,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192713000" />
+    <option name="totallyTimeSpent" value="193884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23991032" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23991032" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50147057" side_tool="true" weight="0.3036566" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4985294" visible="true" weight="0.339934" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4985294" visible="true" weight="0.339934" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -551,37 +588,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Examen/project/src/usuario/usuario.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Examen/project/src/usuario/usuario.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="86" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.routes.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -736,14 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/seleccion/seleccion.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -786,20 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -814,13 +798,6 @@
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -876,6 +853,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-488">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
@@ -887,10 +892,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html">
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2009">
-          <caret line="126" column="62" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
+        <state relative-caret-position="318">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="50" selection-start-column="50" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/usuario/usuario.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/medicamento/medicamento.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
         </state>
       </provider>
     </entry>

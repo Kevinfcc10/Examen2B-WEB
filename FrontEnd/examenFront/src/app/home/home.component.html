@@ -68,13 +68,13 @@
 
 <div class="row">
   <div class="col-sm-1"></div>
-  <div class="col-sm-2" *ngFor="let pac of pacienteAux ; let indice=index">
+  <div class="col-sm-4" *ngFor="let pac of pacienteAux ; let indice=index">
     <div *ngIf="indice<=1">
-      <app-usuario
+      <app-paciente
         [texto]="pac.id_paciente +  ' ' + pac.nombrePa + ' ' + pac.apellidos"
         [imagen]="pac.imagen"
       >
-      </app-usuario>
+      </app-paciente>
       <div class="col-sm-1"></div>
     </div>
   </div>
