@@ -50,9 +50,7 @@ export class HomeComponent implements OnInit {
             this.usuarios = results;
             this.obtenerUsuarios(this.usuarios);
           },
-          (error) => {
-            console.log('Error', error);
-          },
+
         );
 
         const observablePacientes$ = this.servicioPaciente.obtenerAllPaciente();
@@ -61,14 +59,13 @@ export class HomeComponent implements OnInit {
             this.pacientes = results;
             this.obtenerPacientes(this.pacientes);
           },
-          (error) => {
-            console.log('Error', error);
-          },
+
         );
 
         const observableMedicamentos$ = this.servicioMed.obtenerAllMedicamentos();
         observableMedicamentos$.subscribe(
-          results => {
+          (results:any) => {
+            this.medicamentos = results;
             this.obtenerMed(results);
           },
           (error) => {
@@ -80,19 +77,22 @@ export class HomeComponent implements OnInit {
 
     } else {
       this.estado = false;
-      console.log(this.userLike);
+
       const observableUsuariosLike$ = this.servicioUser.obtenerUserbusqueda(this.userLike);
       observableUsuariosLike$.subscribe(
-        results=>{
-          this.usuarios1 = results;
-          if(this.usuarios1.length === undefined){
+        (results:any)=>{
+          this.usuarios = results;
+          if(this.usuarios.length ===  undefined){
+            console.log('dkmsfnsdfndsk')
             const observableUsuariosLike$ = this.servicioUser.obtenerAllUser();
             observableUsuariosLike$.subscribe(
-              results=>{
+              (results:any)=>{
+                this.usuarios = results;
                 this.obtenerUsuarios(results);
               });
           }
           else{
+            this.usuarios = results;
             this.obtenerUsuarios(results);
           }
         }
@@ -100,15 +100,17 @@ export class HomeComponent implements OnInit {
 
       const observablePacLike$ = this.servicioPaciente.obtenerPacientebusqueda(this.userLike);
       observablePacLike$.subscribe(
-        results=>{
-          this.paciente1 = results;
-          if(this.paciente1.length === undefined){
+        (results:any)=>{
+          this.pacientes = results;
+          if(this.pacientes.length === undefined){
             const observablePacLike$ = this.servicioPaciente.obtenerAllPaciente();
             observablePacLike$.subscribe(
-              results=>{
+              (results:any)=>{
+                this.pacientes = results;
                 this.obtenerPacientes(results);
               });
           }else{
+            this.pacientes = results;
             this.obtenerPacientes(results);
           }
         }
@@ -116,22 +118,24 @@ export class HomeComponent implements OnInit {
 
       const observableMedLike$ = this.servicioMed.obtenerMedicamentosbusqueda(this.userLike);
       observableMedLike$.subscribe(
-        results=>{
-          this.medicamento1 = results;
-          if(this.medicamento1 === undefined){
+        (results:any)=>{
+          this.medicamentos = results;
+          if(this.medicamentos.length === undefined){
             const observableMedLike$ = this.servicioMed.obtenerAllMedicamentos();
             observableMedLike$.subscribe(
-              results=> {
+              (results:any)=> {
+                this.medicamentos = results;
                 this.obtenerMed(results);
               });
           }else{
+            this.medicamentos = results;
             this.obtenerMed(results);
           }
-
         }
       );
 
     }
+
   }
 
   obtenerUsuarios(result){

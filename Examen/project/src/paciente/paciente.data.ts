@@ -1,7 +1,7 @@
 export const PacienteData = [
     {'nombres':'Kevin', 'apellidos':'Carate','fechaNacimiento':'1995/02/02','hijos':0,'tieneSeguro':true,"img_paciente":"./assets/perfil1.png",'usuarioFKIdUsuario':'1'},
     {'nombres':'Hugo', 'apellidos':'Montero','fechaNacimiento':'1994/06/09','hijos':0,'tieneSeguro':true,"img_paciente":"./assets/perfil1.png",'usuarioFKIdUsuario':'1',},
-    /*
+
     {'nombres':'Francisco', 'apellidos':'Izurieta','fechaNacimiento':'1995/04/22','hijos':0,'tieneSeguro':false,'usuarioFKIdUsuario':'3',"img_paciente":"./assets/perfil1.png"},
     {'nombres':'Fran', 'apellidos':'Soria','fechaNacimiento':'1998/02/09','hijos':0,'tieneSeguro':false,'usuarioFKIdUsuario':'2',"img_paciente":"./assets/perfil1.png"},
     {'nombres':'Santiago', 'apellidos':'Lema','fechaNacimiento':'1995/07/15','hijos':0,'tieneSeguro':true,'usuarioFKIdUsuario':'5',"img_paciente":"./assets/perfil1.png"},
@@ -30,5 +30,5 @@ export const PacienteData = [
     {'nombres':'Solange', 'apellidos':'Alban','fechaNacimiento':'1995/12/02','hijos':0,'tieneSeguro':false,'usuarioFKIdUsuario':'2',"img_paciente":"./assets/perfil1.png"},
     {'nombres':'Gabriela', 'apellidos':'Ramos','fechaNacimiento':'1995/09/14','hijos':0,'tieneSeguro':false,'usuarioFKIdUsuario':'4',"img_paciente":"./assets/perfil1.png"},
     {'nombres':'Kevin', 'apellidos':'Carate','fechaNacimiento':'1995/02/02','hijos':0,'tieneSeguro':false,'usuarioFKIdUsuario':'6',"img_paciente":"./assets/perfil1.png"},
-    */
+
 ];

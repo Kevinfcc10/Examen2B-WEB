@@ -2,71 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85654bf4-20ba-4b14-91b5-76462563f323" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/interfaces/medicamentos.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/interfaces/paciene.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/interfaces/usuario.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/medicamento.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/paciente.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/usuario.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/assets/med1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/paciente/paciente.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Examen/project/src/usuario/usuario.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/bind.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/bind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/call_get.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/call_get.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/cancel.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/cancel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/catch_filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/catch_filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/context.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/context.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/debuggability.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/debuggability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/direct_resolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/direct_resolve.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/each.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/each.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/errors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/es5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/finally.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/finally.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/generators.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/generators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/join.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/join.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/method.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/method.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/nodeback.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/nodeback.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/nodeify.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/nodeify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/promise.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/promise_array.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/promise_array.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/promisify.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/promisify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/queue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/race.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/race.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/reduce.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/reduce.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/settle.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/settle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/some.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/some.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/synchronous_inspection.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/synchronous_inspection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/thenables.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/thenables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/timers.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/timers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/using.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/using.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/js/release/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/node_modules/bluebird/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/peticion/peticion.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/examenFront/src/app/peticion/peticion.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -80,34 +17,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="medicamento.data.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="medicamento.data.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.data.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="90">
               <caret line="16" column="201" selection-start-line="16" selection-start-column="194" selection-end-line="16" selection-end-column="201" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paciente.service.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/paciente.service.ts">
+      <file leaf-file-name="usuario.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/usuario.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            <state relative-caret-position="289">
+              <caret line="17" column="70" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="70" />
               <folding>
-                <element signature="e#0#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-              <folding>
-                <element signature="e#0#77#0" expanded="true" />
+                <element signature="e#0#75#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,7 +57,6 @@
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/paciente/paciente.component.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/modelos/medicamentos.interface.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/medicamento.service.ts" />
-        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/usuario.service.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/usuario/usuario.entity.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/usuario/usuario.schema.ts" />
@@ -145,7 +69,6 @@
         <option value="$PROJECT_DIR$/Examen/project/src/paciente/paciente.schema.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/paciente/paciente.controller.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/paciente/paciente.service.ts" />
-        <option value="$PROJECT_DIR$/Examen/project/src/paciente/paciente.data.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/interfaces/paciene.interface.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.entity.ts" />
         <option value="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.schema.ts" />
@@ -154,8 +77,10 @@
         <option value="$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.controller.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/interfaces/medicamentos.interface.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.html" />
-        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts" />
         <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/paciente.service.ts" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/usuario.service.ts" />
+        <option value="$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/Examen/project/src/paciente/paciente.data.ts" />
       </list>
     </option>
   </component>
@@ -3036,7 +2961,7 @@
       <path value="$PROJECT_DIR$/node_modules/yargs/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="673" />
     <option name="width" value="694" />
     <option name="height" value="735" />
@@ -3073,14 +2998,6 @@
               <item name="Examen" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="medicamentos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
@@ -3135,14 +3052,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="servicios" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ExamenIB-WEB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExamenIB-WEB" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="examenFront" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -3195,7 +3104,7 @@
       <workItem from="1528082735287" duration="1177000" />
       <workItem from="1528085287542" duration="38000" />
       <workItem from="1528121026000" duration="4227000" />
-      <workItem from="1531762625860" duration="15905000" />
+      <workItem from="1531762625860" duration="17997000" />
     </task>
     <task id="LOCAL-00001" summary="Literal 1 - Examen / solo para Paciente">
       <created>1527883569154</created>
@@ -3271,21 +3180,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87219000" />
+    <option name="totallyTimeSpent" value="89311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20702541" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20702541" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50147057" side_tool="true" weight="0.3036566" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4985294" visible="true" weight="0.44059405" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4985294" visible="true" weight="0.51155114" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -3372,16 +3280,6 @@
           <caret line="4" selection-start-line="4" selection-end-line="19" selection-end-column="1" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/usuario.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3505,13 +3403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examen/project/src/paciente/paciente.data.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="118" selection-start-line="1" selection-start-column="118" selection-end-line="1" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Examen/project/src/usuario/usuario.data.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -3584,16 +3475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/interfaces/paciene.interface.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -3601,20 +3482,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.data.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="201" selection-start-line="16" selection-start-column="194" selection-end-line="16" selection-end-column="201" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/paciente.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
+        <state relative-caret-position="136">
           <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding>
             <element signature="e#0#66#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="122" column="53" selection-start-line="122" selection-start-column="53" selection-end-line="122" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/examenFront/src/app/servicios/usuario.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="70" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examen/project/src/paciente/paciente.data.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examen/project/src/medicamentos/medicamento.data.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="201" selection-start-line="16" selection-start-column="194" selection-end-line="16" selection-end-column="201" />
         </state>
       </provider>
     </entry>
