@@ -1,7 +1,7 @@
 import {Component} from "@nestjs/common";
 import {InjectRepository} from "@nestjs/typeorm";
 import {MedicamentoEntity} from "./medicamento.entity";
-import {Repository} from "typeorm";
+import {Like, Repository} from "typeorm";
 import {PacienteEntity} from "../paciente/paciente.entity";
 import {MedicamentoData} from "./medicamento.data";
 
@@ -50,6 +50,10 @@ export class MedicamentoService {
         }
     }
 
+    async buscarMedLike(name: string): Promise<MedicamentoEntity[]> {
+
+        return (await this.medicamentoRepository.find({nombre:Like('%'+name+'%')}));
+    }
 
 
 

@@ -1,6 +1,6 @@
 import {Component, Req, Res} from "@nestjs/common";
 import {InjectConnection, InjectEntityManager, InjectRepository} from "@nestjs/typeorm";
-import {Connection, EntityManager, getRepository, Like, Repository} from "typeorm";
+import {Connection, EntityManager, Equal, getRepository, Like, Repository} from "typeorm";
 import {UsuarioEntity} from "./usuario.entity";
 import {UsuarioData} from "./usuario.data";
 import {Paciente} from "../paciente/paciente.service";
@@ -44,15 +44,15 @@ export class UsuarioService {
         }
     }
 
-    async buscarUsuarioNombre(name: string): Promise<UsuarioEntity[]> {
-
-        console.log(name.toString());
-        await this.usuarioRepository.find({nombre_usuario:Like("%"+name+"%")}).then(function (value) {
-            console.log(value);
-        });
-        return (await this.usuarioRepository.find({nombre_usuario:Like("%"+name+"%")}));
+    async buscarUsuarioNombre(name: string, pass:string): Promise<UsuarioEntity[]> {
+        console.log(await this.usuarioRepository.find({nombre_usuario:Equal(name), password_usuario:Equal(pass)}));
+        return (await this.usuarioRepository.find({nombre_usuario:Equal(name), password_usuario:Equal(pass)}));
     }
 
+    async buscarUsuarioLike(name: string): Promise<UsuarioEntity[]> {
+        console.log(await this.usuarioRepository.find({nombre_usuario:Like('%'+name+'%')}));
+        return (await this.usuarioRepository.find({nombre_usuario:Like('%'+name+'%')}));
+    }
 
 }
 

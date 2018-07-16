@@ -52,11 +52,21 @@ export class MedicamentoController {
     }
 
 
+    @Get('/:name')
+    mostrarMedLike(@Res () response, @Req () request, @Param() params){
 
-
-
-
-
+        var promise = this.medicamentoService.buscarMedLike(params.name);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el usuario',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
+    }
 
 
     @Get('/:id')

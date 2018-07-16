@@ -44,22 +44,35 @@ export class UsuarioController {
         return response.send('Usuario Registrado');
     }
 
-    @Get('/:name')
+    @Get('/:name&:pass')
     mostrarUsuario(@Res () response, @Req () request, @Param() params){
-        this.usuarioService.buscarUsuarioNombre(params.name);
 
-        /*let arregloUsuario = this.usuarioService.buscarUsuarioNombre(params.name);
-        if(arregloUsuario){
-            return response.send(arregloUsuario);
-        } else{
-            console.log('no encontrado');
-            return response.status(400).send({
-                mensaje:'Paciente no encontrado',
-                estado:HttpStatus.NOT_FOUND + ' Not found',
-                URL:request.originalUrl,
-                //cabeceras: request.headers,
-            });
-        }*/
-        return response.send('encontrado');
+        var promise = this.usuarioService.buscarUsuarioNombre(params.name, params.pass);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el usuario',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
+    }
+
+    @Get('/:name')
+    mostrarUsuarioLike(@Res () response, @Req () request, @Param() params){
+
+        var promise = this.usuarioService.buscarUsuarioLike(params.name);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el usuario',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
     }
 }

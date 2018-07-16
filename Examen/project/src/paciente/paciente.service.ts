@@ -1,6 +1,6 @@
 import {Component} from "@nestjs/common";
 import {InjectRepository} from "@nestjs/typeorm";
-import {Repository} from "typeorm";
+import {Equal, Like, Repository} from "typeorm";
 import {PacienteEntity} from "./paciente.entity";
 import {UsuarioData} from "../usuario/usuario.data";
 import {UsuarioEntity} from "../usuario/usuario.entity";
@@ -55,24 +55,17 @@ export class PacienteService {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-    //Metodo obtener un paciente
-    obtenerUno(pacienteID){
-
-        console.log(this.pacientes[pacienteID]);
-        return this.pacientes[pacienteID];
+    //Metodo pacientes por usuario
+    async obtenerPacientesPorUsuario(idUser:number): Promise<PacienteEntity[]>{
+        return (await this.pacienteRepository.find({usuarioFK:Equal(idUser)}));
     }
 
+    async buscarPacienteLike(name: string): Promise<PacienteEntity[]> {
+        console.log(await this.pacienteRepository.find({nombres:Like('%'+name+'%')}));
+        return (await this.pacienteRepository.find({nombres:Like('%'+name+'%')}));
+    }
 
+    /*
     //Metodo editar un paciente
     editarUno(idPac, nombrePac, apellidoPac, fechaPac, hijosPac, tieneSeguroPac){
         let pacienteActualizado = this.obtenerUno(idPac);
@@ -85,6 +78,7 @@ export class PacienteService {
 
         return pacienteActualizado;
     }
+*/
 }
 
 

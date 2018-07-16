@@ -47,7 +47,21 @@ export  class PacienteController {
             }
         });
     }
+    @Get('/:name')
+    mostrarPacienteLike(@Res () response, @Req () request, @Param() params){
 
+        var promise = this.pacienteService.buscarPacienteLike(params.name);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el usuario',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
+    }
 
 
 
@@ -67,21 +81,22 @@ export  class PacienteController {
     @Get('/:id')
     mostrarPaciente(@Res () response, @Req () request, @Param() params){
 
-        let arregloPaciente = this.pacienteService.obtenerUno(params.id);
-        if(arregloPaciente){
-            return response.send(arregloPaciente);
-        } else{
-            console.log('no encontrado');
-            return response.status(400).send({
-                mensaje:'Paciente no encontrado',
-                estado:HttpStatus.NOT_FOUND + ' Not found',
-                URL:request.originalUrl,
-                //cabeceras: request.headers,
-            });
-        }
-
+        var promise = this.pacienteService.obtenerPacientesPorUsuario(params.id);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el usuario',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
     }
 
+
+
+    /*
     @Put('/:id') //Uso pipe
     modificarPaciente(@Res () response, @Req () request, @Param() params, @Body(new PacientePipe(PACIENTE_SCHEMA)) body){
         let arregloPaciente = this.pacienteService.obtenerUno(params.id);
@@ -104,5 +119,6 @@ export  class PacienteController {
             });
         }
     }
+    */
 }
 
