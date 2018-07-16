@@ -11,8 +11,8 @@ export class MedicamentoController {
     }
 
     //Body params
-    @Post()
-    crearMedicamento(@Body(new MedicamentoPipe(MEDICAMENTO_SCHEMA)) bodyParams){
+    @Post('registrar')
+    crearMedicamento(@Body(new MedicamentoPipe(MEDICAMENTO_SCHEMA)) bodyParams, @Res () response){
         const medicamento1 = new  Medicamento(
             bodyParams.gramosAIngerir,
             bodyParams.nombre,
@@ -20,26 +20,54 @@ export class MedicamentoController {
             bodyParams.usadoPara,
             bodyParams.fechaCaducidad,
             bodyParams.numeroPastillas,
-            bodyParams.pacienteId,
+            bodyParams.pacienteIdIdPaciente,
         );
 
-        return this.medicamentoService.crearMedicamento(medicamento1);
+        this.medicamentoService.crearMedicamento(medicamento1);
+        return response.send('Medicamento Registrado');
 
     }
 
-    @Get()
+    @Get('crearMedicamentos')
+    registrarAllMedicamentos(@Res () response, @Req () request){
+        this.medicamentoService.crearTodosMedicamentos()
+        return response.status(202).send('Medicamentos Creados');
+    }
+
+    @Get('mostrarMedicamentos')
     listarTodosLosMedicamentos(@Res () response, @Req () request){
-        var arregloMedicamentos = this.medicamentoService.listarMedicamento();
-        if(Object.keys(arregloMedicamentos).length === 0){
-            return response.send({
-                mensaje:'No existe ningun medicamento',
-                estado: HttpStatus.NOT_FOUND + ' Not found',
-            });
-        } else{
-            return response.status(202).send(arregloMedicamentos);
-        }
-        //return response.status(202).send(this.medicamentoService.listarMedicamento());
+        var promise = Promise.resolve(this.medicamentoService.listarMedicamento())
+
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No existe ningun medicamento',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }
+            else{
+                return response.status(202).send(value);
+            }
+        });
     }
+
+
+    @Get('/:name')
+    mostrarMedLike(@Res () response, @Req () request, @Param() params){
+
+        var promise = this.medicamentoService.buscarMedLike(params.name);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el usuario',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
+    }
+
 
     @Get('/:id')
     mostrarUnMedicamento(@Res () response, @Req () request, @Param() params){

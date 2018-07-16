@@ -1,0 +1,132 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class=" card text-white bg-primary">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-3" align="right">
+            <i class="icon ion-md-search"></i>
+          </div>
+          <div class="col-sm-6">
+            <input class="form-control" type="search" placeholder="Buscar Usuario/Papa/Hijo" aria-label="Search" [(ngModel)]="userLike" name="userLike">
+          </div>
+          <div class="col-sm-3">
+            <button class="btn" type="submit" (click)="ngOnInit()">
+              <img src="./assets/lupa.png" alt="busqueda" [width]="18" [height]="20">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1" text-aling="center"><h2>USUARIOS</h2></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-2" *ngFor="let user of usuarioAux ; let indice=index">
+    <div *ngIf="indice<=3">
+        <app-usuario
+          [texto]="user.id_usuario + ' ' + user.nombres"
+          [imagen]="user.imagen"
+        >
+        </app-usuario>
+    <div class="col-sm-1"></div>
+  </div>
+  </div>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-2">
+      <button class="btn btn-primary" (click)="disminuirContador()">
+        Anterior
+      </button>
+    </div>
+    <div class="col-sm-7"></div>
+    <div class="col-sm-3">
+      <button class="btn btn-primary" (click)="aumentarContador()">
+        Siguiente
+      </button>
+    </div>
+
+</div>
+
+
+<div class="row">
+  <div class="col-sm-1" text-aling="center"><h2>PACIENTES</h2></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-4" *ngFor="let pac of pacienteAux ; let indice=index">
+    <div *ngIf="indice<=1">
+      <app-paciente
+        [texto]="pac.id_paciente +  ' ' + pac.nombrePa + ' ' + pac.apellidos"
+        [imagen]="pac.imagen"
+      >
+      </app-paciente>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-2">
+    <button class="btn btn-primary" (click)="disminuirContador1()">
+      Anterior
+    </button>
+  </div>
+  <div class="col-sm-7"></div>
+  <div class="col-sm-3">
+    <button class="btn btn-primary" (click)="aumentarContador1()">
+      Siguiente
+    </button>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <div class="col-sm-1" text-aling="center"><h2>MEDICAMENTOS</h2></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-2" *ngFor="let med of medicamentoAux ; let indice=index">
+    <div *ngIf="indice<=3">
+      <app-medicamento
+        [texto]="med.nombre + ' ' + med.composicion"
+        [imagen]="med.imagen"
+      >
+      </app-medicamento>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-2">
+    <button class="btn btn-primary" (click)="disminuirContador2()">
+      Anterior
+    </button>
+  </div>
+  <div class="col-sm-7"></div>
+  <div class="col-sm-3">
+    <button class="btn btn-primary" (click)="aumentarContador2()">
+      Siguiente
+    </button>
+  </div>
+
+</div>

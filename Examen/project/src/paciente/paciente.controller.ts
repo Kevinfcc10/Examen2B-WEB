@@ -11,51 +11,92 @@ export  class PacienteController {
 
     }
     //Body params
-    @Post() //uso pipe
-    crearPaciente(@Body(new PacientePipe(PACIENTE_SCHEMA)) bodyParams) {
+    @Post('registrar') //uso pipe
+    crearPaciente(@Body(new PacientePipe(PACIENTE_SCHEMA)) bodyParams, @Res () response) {
             const paciente1 = new Paciente(
                 bodyParams.nombres,
                 bodyParams.apellidos,
                 bodyParams.fechaNacimiento,
                 bodyParams.hijos,
                 bodyParams.tieneSeguro,
+                bodyParams.usuarioFKIdUsuario,
             );
-            return this.pacienteService.crearPaciente(paciente1);
+            this.pacienteService.crearPaciente(paciente1);
+
+            return response.send('Paciente Registrado');
     }
 
-    @Get()
-    listarTodosLosPaciente(@Res () response, @Req () request){
-        var arregloPacientes = this.pacienteService.listarPaciente();
-        if(Object.keys(arregloPacientes).length === 0){
-            return response.send({
-                mensaje:'No existe ningun paciente',
-                estado: HttpStatus.NOT_FOUND + ' Not found',
-            });
-        } else{
-            return response.status(202).send(arregloPacientes);
-        }
-        //return response.status(202).send(this.pacienteService.listarPaciente());
+    @Get('crearPacientes')
+    registrarAllPacientes(@Res () response, @Req () request){
+        this.pacienteService.crearTodosPacientes()
+        return response.status(202).send('Pacientes Creados');
     }
+
+    @Get('mostrarPacientes')
+    listarTodosLosPaciente(@Res () response, @Req () request){
+        var promise = Promise.resolve(this.pacienteService.listarPaciente());
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No existe ningun paciente',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }
+            else{
+                return response.status(202).send(value);
+            }
+        });
+    }
+    @Get('/:name')
+    mostrarPacienteLike(@Res () response, @Req () request, @Param() params){
+
+        var promise = this.pacienteService.buscarPacienteLike(params.name);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el usuario',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @Get('/:id')
     mostrarPaciente(@Res () response, @Req () request, @Param() params){
 
-        let arregloPaciente = this.pacienteService.obtenerUno(params.id);
-        if(arregloPaciente){
-            return response.send(arregloPaciente);
-        } else{
-            console.log('no encontrado');
-            return response.status(400).send({
-                mensaje:'Paciente no encontrado',
-                estado:HttpStatus.NOT_FOUND + ' Not found',
-                URL:request.originalUrl,
-                //cabeceras: request.headers,
-            });
-        }
-
+        var promise = this.pacienteService.obtenerPacientesPorUsuario(params.id);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el usuario',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
     }
 
+
+
+    /*
     @Put('/:id') //Uso pipe
     modificarPaciente(@Res () response, @Req () request, @Param() params, @Body(new PacientePipe(PACIENTE_SCHEMA)) body){
         let arregloPaciente = this.pacienteService.obtenerUno(params.id);
@@ -78,5 +119,6 @@ export  class PacienteController {
             });
         }
     }
+    */
 }
 

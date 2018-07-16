@@ -1,0 +1,32 @@
+<br>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" align="center">
+    <p>LOGIN</p>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <form>
+      <div class="form-group">
+        <label>Usuario</label>
+        <input type="text" class="form-control" id="UserLogin" placeholder="Ingrese usuario" [(ngModel)]="user" name="user">
+      </div>
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" class="form-control" id="PasswordLogin" placeholder="Ingrese Contraseña" [(ngModel)]="password" name="pass">
+      </div>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-primary" (click)="ngOnInit()">Ingresar</button>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
