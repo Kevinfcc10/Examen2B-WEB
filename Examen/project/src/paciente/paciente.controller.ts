@@ -20,6 +20,7 @@ export  class PacienteController {
                 bodyParams.hijos,
                 bodyParams.tieneSeguro,
                 bodyParams.usuarioFKIdUsuario,
+                bodyParams.img,
             );
             this.pacienteService.crearPaciente(paciente1);
 

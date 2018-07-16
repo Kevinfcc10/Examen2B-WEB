@@ -9,4 +9,5 @@ export const MEDICAMENTO_SCHEMA = Joi
         fechaCaducidad:Joi.date().required(),
         numeroPastillas:Joi.number().integer().required(),
         pacienteIdIdPaciente:Joi.number().integer().required(),
+        img_med:Joi.string()
     });

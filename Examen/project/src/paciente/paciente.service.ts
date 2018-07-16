@@ -34,6 +34,7 @@ export class PacienteService {
         pac.hijos = paciente.hijos;
         pac.tieneSeguro = paciente.tieneSeguro;
         pac.usuarioFK = paciente.usuarioFKIdUsuario;
+        pac.img_paciente = paciente.img_paciente;
 
         this.pacienteRepository.save(pac);
     }
@@ -49,6 +50,7 @@ export class PacienteService {
             paciente.hijos = PacienteData[indice].hijos;
             paciente.tieneSeguro = PacienteData[indice].tieneSeguro;
             paciente.usuarioFK = parseInt(PacienteData[indice].usuarioFKIdUsuario);
+            paciente.img_paciente = PacienteData[indice].img_paciente;
 
             this.pacienteRepository.save(paciente);
         }
@@ -89,6 +91,7 @@ export class Paciente {
         public fechaNacimiento:string,
         public hijos:number,
         public tieneSeguro:boolean,
+        public img_paciente:string,
         public usuarioFKIdUsuario:number,
     ){};
 }

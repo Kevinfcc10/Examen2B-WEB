@@ -17,6 +17,8 @@ export class PacienteEntity {
     hijos: number;
     @Column()
     tieneSeguro: boolean;
+    @Column()
+    img_paciente: string;
 
     @ManyToOne(
         type => UsuarioEntity,

@@ -36,8 +36,8 @@
   <div class="col-sm-2" *ngFor="let user of usuarioAux ; let indice=index">
     <div *ngIf="indice<=3">
         <app-usuario
-          [texto]="user.id_usuario + ' ' + user.nombres"
-          [imagen]="user.imagen"
+          [texto]="user.id_usuario + ' ' + user.nombre_usuario"
+          [imagen]="user.img_usuario"
         >
         </app-usuario>
     <div class="col-sm-1"></div>
@@ -61,18 +61,17 @@
 
 </div>
 
-
 <div class="row">
   <div class="col-sm-1" text-aling="center"><h2>PACIENTES</h2></div>
 </div>
 
 <div class="row">
   <div class="col-sm-1"></div>
-  <div class="col-sm-4" *ngFor="let pac of pacienteAux ; let indice=index">
+  <div class="col-sm-4" *ngFor="let pac of pacientesAux ; let indice=index">
     <div *ngIf="indice<=1">
       <app-paciente
-        [texto]="pac.id_paciente +  ' ' + pac.nombrePa + ' ' + pac.apellidos"
-        [imagen]="pac.imagen"
+        [texto]="pac.id_paciente +  ' ' + pac.nombres + ' ' + pac.apellidos"
+        [imagen]="pac.img_paciente"
       >
       </app-paciente>
       <div class="col-sm-1"></div>
@@ -103,11 +102,11 @@
 
 <div class="row">
   <div class="col-sm-1"></div>
-  <div class="col-sm-2" *ngFor="let med of medicamentoAux ; let indice=index">
+  <div class="col-sm-2" *ngFor="let med of medicamentosAux ; let indice=index">
     <div *ngIf="indice<=3">
       <app-medicamento
         [texto]="med.nombre + ' ' + med.composicion"
-        [imagen]="med.imagen"
+        [imagen]="med.img_med"
       >
       </app-medicamento>
       <div class="col-sm-1"></div>

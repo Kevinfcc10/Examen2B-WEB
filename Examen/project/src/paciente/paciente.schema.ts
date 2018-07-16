@@ -8,4 +8,5 @@ export const PACIENTE_SCHEMA = Joi
         hijos:Joi.number().integer().min(0).max(8).required(),
         tieneSeguro:Joi.boolean().required(),
         usuarioFKIdUsuario: Joi.number().integer().required(),
+        img_paciente:Joi.string()
     });

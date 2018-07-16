@@ -21,6 +21,7 @@ export class MedicamentoController {
             bodyParams.fechaCaducidad,
             bodyParams.numeroPastillas,
             bodyParams.pacienteIdIdPaciente,
+            bodyParams.img_med,
         );
 
         this.medicamentoService.crearMedicamento(medicamento1);

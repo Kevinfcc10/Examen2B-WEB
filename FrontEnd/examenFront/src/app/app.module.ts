@@ -14,6 +14,9 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import {HttpModule} from "@angular/http";
 import { PacienteComponent } from './paciente/paciente.component';
 import { MedicamentoComponent } from './medicamento/medicamento.component';
+import {MedicamentoService} from "./servicios/medicamento.service";
+import {UsuarioService} from "./servicios/usuario.service";
+import {PacienteService} from "./servicios/paciente.service";
 
 
 @NgModule({
@@ -39,7 +42,7 @@ import { MedicamentoComponent } from './medicamento/medicamento.component';
       }
     )
   ],
-  providers: [HomeComponent],
+  providers: [HomeComponent, MedicamentoService, UsuarioService, PacienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

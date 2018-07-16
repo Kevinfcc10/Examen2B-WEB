@@ -38,7 +38,8 @@ export class UsuarioController {
     registrarUsuario(@Body(new UsuarioPipe(USUARIO_SCHEMA)) bodyParams, @Res () response){
         const usuario = new Usuario(
             bodyParams.nombre_usuario,
-            bodyParams.password_usuario
+            bodyParams.password_usuario,
+            bodyParams.img_usuario,
         );
         this.usuarioService.crearUsuario(usuario);
         return response.send('Usuario Registrado');

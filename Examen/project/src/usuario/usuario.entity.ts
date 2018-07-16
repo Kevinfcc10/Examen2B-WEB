@@ -9,6 +9,8 @@ export class UsuarioEntity {
     nombre_usuario: string;
     @Column()
     password_usuario: string;
+    @Column()
+    img_usuario: string;
 
     @OneToMany(
         type => PacienteEntity,

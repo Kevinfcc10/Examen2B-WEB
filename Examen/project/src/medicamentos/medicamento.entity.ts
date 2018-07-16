@@ -18,6 +18,8 @@ export class MedicamentoEntity {
     fechaCaducidad: Date;
     @Column()
     numeroPastillas: number;
+    @Column()
+    img_med: string;
 
 
     @ManyToOne(

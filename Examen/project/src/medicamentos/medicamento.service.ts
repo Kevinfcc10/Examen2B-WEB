@@ -31,6 +31,7 @@ export class MedicamentoService {
         med.fechaCaducidad = new Date(medicamento.fechaCaducidad);
         med.numeroPastillas = medicamento.numeroPastillas;
         med.pacienteId = medicamento.pacienteIdIdPaciente;
+        med.img_med = medicamento.img_med;
 
         this.medicamentoRepository.save(med);
     }
@@ -45,6 +46,7 @@ export class MedicamentoService {
             med.fechaCaducidad = new Date(MedicamentoData[indice].fechaCaducidad);
             med.numeroPastillas = parseInt(MedicamentoData[indice].numeroPastillas);
             med.pacienteId = parseInt(MedicamentoData[indice].pacienteIdIdPaciente);
+            med.img_med = MedicamentoData[indice].img_med;
 
             this.medicamentoRepository.save(med);
         }
@@ -98,5 +100,6 @@ export class Medicamento {
         public fechaCaducidad:string,
         public numeroPastillas:number,
         public pacienteIdIdPaciente:number,
+        public img_med:string
     ){};
 }

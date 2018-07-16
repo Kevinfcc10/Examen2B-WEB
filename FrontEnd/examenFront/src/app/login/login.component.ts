@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           }
           else {
             console.log(this.usuario[0].id_usuario);
-            this.home.obtenerDatosUsuario(this.usuario[0].id_usuario);
+            //this.home.obtenerDatosUsuario(this.usuario[0].id_usuario);
             this._router.navigate(['/home']);
           }
         },
