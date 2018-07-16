@@ -105,11 +105,11 @@
   <div class="col-sm-1"></div>
   <div class="col-sm-2" *ngFor="let med of medicamentoAux ; let indice=index">
     <div *ngIf="indice<=3">
-      <app-usuario
+      <app-medicamento
         [texto]="med.nombre + ' ' + med.composicion"
         [imagen]="med.imagen"
       >
-      </app-usuario>
+      </app-medicamento>
       <div class="col-sm-1"></div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-paciente',
@@ -10,7 +11,7 @@ export class PacienteComponent implements OnInit {
   @Input() imagen: string;
   @Input() texto: string;
   @Output() selecciono: EventEmitter<string> = new EventEmitter();
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
   }
@@ -18,6 +19,7 @@ export class PacienteComponent implements OnInit {
   seleccionoPaciente() {
     console.log('Selecciono', this.texto);
     this.selecciono.emit(this.texto);
+    this._router.navigate(['/peticion']);
   }
 
 }

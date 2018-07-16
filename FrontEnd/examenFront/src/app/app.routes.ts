@@ -15,19 +15,17 @@ export const RutasApp:Routes=[
   },
   {
     path:'home',component:HomeComponent,
-    children:[
-      {
-        path:'peticion', component: PeticionComponent,
-
-      },
-      {
-        path:'seleccion', component: SeleccionComponent
-      },
-      {
-        path:'perfil', component: PerfilComponent
-      }
-    ]
   },
+  {
+    path:'peticion', component: PeticionComponent,
+
+  },
+  {
+    path:'seleccion', component: SeleccionComponent
+  },
+  {
+    path:'perfil', component: PerfilComponent
+  }
 
 ];
 
