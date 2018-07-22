@@ -4,10 +4,10 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-2">
       <div class="row">
-        <div class="col-sm-12" align="center">
+        <div class="col-sm-12 disabled" align="center" style="pointer-events: none">
           <app-usuario
-            [nombre]="'kevin carate'"
-            [imagen]="'assets/perfil1.png'"
+            [nombre]="nombreUser"
+            [imagen]="imagenUser"
             [estado]="false"
           >
           </app-usuario>
@@ -33,10 +33,10 @@
         </div>
         <br>
         <div class="row">
-          <div class="col-sm-12" [align]="'right'">
+          <div class="col-sm-12" [align]="'right'" style="pointer-events: none">
             <app-medicamento
-              [nombre]="'Ibuprofeno'"
-              [imagen]="'assets/perfil1.png'"
+              [nombre]="nombreItem1"
+              [imagen]="imagenItem1"
               [estado]="false"
               [estado2]="false"
             >
@@ -57,10 +57,10 @@
         </div>
         <br>
         <div class="row">
-          <div class="col-sm-12" [align]="'right'">
+          <div class="col-sm-12" [align]="'right'" style="pointer-events: none">
             <app-medicamento
-              [nombre]="'Ibuprofeno'"
-              [imagen]="'assets/perfil1.png'"
+              [nombre]="nombreItem2"
+              [imagen]="imagenItem2"
               [estado]="false"
               [estado2]="false"
             >
@@ -70,6 +70,5 @@
       </div>
     </div>
     <div class="col-sm-3"></div>
-
   </div>
 </div>

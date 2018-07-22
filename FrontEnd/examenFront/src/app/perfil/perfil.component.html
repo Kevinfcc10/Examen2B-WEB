@@ -48,8 +48,14 @@
 <div class="container-fluid border">
   <br>
   <div class="row">
-    <div class="col-sm-12">
-      <app-peticion-espera></app-peticion-espera>
+    <div class="col-sm-12" *ngFor="let idSel of transferencia;let indice=index">
+      <app-peticion-espera
+      [nombreUser]="nombreUser"
+      [imagenUser]="img_user"
+      [idSeleccionado]="idSel.idMedicamento1"
+      [idSeleccionado2]="idSel.idMedicamento2"
+      >
+      </app-peticion-espera>
     </div>
   </div>
   <br><br>
@@ -68,8 +74,12 @@
 <div class="container-fluid border">
 
   <div class="row">
-    <div class="col-sm-12">
-      <app-peticion-aceptar></app-peticion-aceptar>
+    <div class="col-sm-12" *ngFor="let idSel of transferenciaconfirmar;let indice=index">
+      <app-peticion-aceptar
+        [idSeleccionado]="idSel.idMedicamento1"
+        [idSeleccionado2]="idSel.idMedicamento2"
+        [idAceptarRechazar]="idSel.id_transferencia"
+      ></app-peticion-aceptar>
     </div>
   </div>
   <br>
