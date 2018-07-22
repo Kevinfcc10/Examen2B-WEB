@@ -18,6 +18,9 @@ export class PeticionComponent implements OnInit{
   @Input() counter2:number = 0;
   numeroHijos='';
   estadoContainer=true;
+  counter = 1;
+  iteraciones = 0;
+  estado=true;
 
   usuarios:Array<UsuarioInterface>
   pacientes:Array<PacieneInterface>
@@ -79,7 +82,15 @@ export class PeticionComponent implements OnInit{
           (results:any) => {
             this.medicamentos = results;
             if(this.medicamentos.length != undefined){
-              this.medicamentosAux = results;
+              console.log(this.medicamentos.length)
+              if(this.medicamentos.length < 4){
+                this.medicamentosAux = this.medicamentos.slice(0,this.medicamentos.length);
+                this.estado = false;
+              }
+              else{
+                this.estado = true;
+                this.medicamentosAux = this.medicamentos.slice(0,4);
+              }
               this.numeroHijos= this.medicamentos.length.toString();
             }
             else{
@@ -109,5 +120,21 @@ export class PeticionComponent implements OnInit{
     this.estadoContainer = true;
     this.ngOnInit()
   }
+
+  cargarMas(){
+    //iteraciones
+    this.iteraciones = Math.floor(this.medicamentos.length/4);
+    if(this.iteraciones === 1 || this.iteraciones === this.counter){
+      this.medicamentosAux = this.medicamentos.slice(0,this.medicamentos.length);
+      this.estado = false;
+    }
+    else{
+      this.counter += 1;
+      this.medicamentosAux = this.medicamentos.slice(0,this.counter * 4);
+      this.estado = true;
+    }
+
+  }
+
 }
 

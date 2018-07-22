@@ -2,26 +2,26 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <p>{{nombre}}</p>
+      <br><p>{{nombre}}</p>
     </div>
     <div class="col-sm-6">
       <img class="borde" [src]="imagen" alt="" width="75" height="75">
     </div>
   </div>
-  <br>
   <div class="row">
     <div class="col-sm-12" >
       <div class="col-sm-6" *ngIf="estado">
+        <br>
         <button type="submit" class="btn btn-dark btn-primary" (click)=pedirTransferencia() >
           Pedir Transferencia
         </button>
       </div>
       <div class="col-sm-6" *ngIf="estado2">
+        <br>
         <button type="submit" class="btn btn-dark btn-primary" (click)=seleccionarTransferencia() >
           Seleccionar Transferencia
         </button>
       </div>
-
     </div>
   </div>
 

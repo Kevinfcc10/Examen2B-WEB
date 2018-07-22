@@ -86,18 +86,25 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="row">
-        <div class="col-sm-2" *ngFor="let med of medicamentosAux ; let indice=index">
-          <div *ngIf="indice<=3">
+        <div class="col-sm-3" *ngFor="let med of medicamentosAux ; let indice=index">
             <app-medicamento
               [nombre]="med.nombre"
               [imagen]="med.img_med"
               [idMedicamento]="med.id_medicamento"
+              [estado2]="false"
             >
             </app-medicamento>
-            <div class="col-sm-1"></div>
-          </div>
+          <br>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-2" *ngIf="estado">
+      <button class="btn btn-dark btn-sm" (click)=cargarMas()> Cargar Mas</button>
+    </div>
+    <div class="col-sm-5"></div>
   </div>
 </div>
