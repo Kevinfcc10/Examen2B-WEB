@@ -1,21 +1,39 @@
-import {MedicamentosInterface} from "../interfaces/medicamentos.interface";
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
-import {UsuariosInterface} from "../interfaces/usuario.interface";
+import {UsuarioInterface} from "../interfaces/usuario.interface";
 
 @Injectable()
 export class UsuarioService {
 
-  public static userSelect: UsuariosInterface;
+  public static usuarioLogin:UsuarioInterface
+  public static userSelect:number=0;
+  public static userLogin:number = 0;
+
+
   constructor(private consulta: HttpClient) {
   }
 
-  obtenerAllUser(){
-    return this.consulta.get('http://localhost:1337/Usuario/mostrarUsuarios');
+  //obtener todos los usuarios a excepcion del usuario logueado
+  obtenerAllUser(idUsuario:number){
+    return this.consulta.get('http://localhost:1337/Usuario/listarUsuarios/'+idUsuario);
   }
 
-  obtenerUserbusqueda(busqueda:string){
-    return this.consulta.get('http://localhost:1337/Usuario/'+busqueda);
+  //buscar un usuario mediante Like
+  obtenerUserbusqueda(busqueda:string, idUsuario:number){
+    return this.consulta.get('http://localhost:1337/Usuario/filtrarUsuarios/'+busqueda+'&'+idUsuario);
   }
 
+  //obtener un determinado usuario
+  obtenerUserId(id:number){
+    return this.consulta.get('http://localhost:1337/Usuario/obtenerUsuario/'+id);
+  }
+
+  //obtener un determinado usuario dado el id del paciente
+  obtenerUserDadoPaciente(idPac:number){
+    return this.consulta.get('http://localhost:1337/Usuario/usuario/'+idPac);
+  }
+
+  obtenerUsuarioDadoMedicamento(idMed:number){
+    return this.consulta.get('http://localhost:1337/Usuario/usuarioMed/'+idMed);
+  }
 }

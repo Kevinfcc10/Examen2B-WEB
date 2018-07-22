@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <br><br>
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-2">
+      <br><br>
+      <div class="row">
+        <div class="col-sm-12" align="center">
+          <button class="btn" type="submit" style="width:125px; height:35px; cursor: pointer;
+          vertical-align:bottom; text-align:center; border-color:black; background-color: #0E9A00">
+            <div style="color: white; text-align:center;">Aceptar</div>
+          </button>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-12" align="center">
+          <button class="btn" type="submit" style="width:125px; height:35px;cursor:pointer;
+          vertical-align:bottom; text-align:center; border-color:black; background-color: #990000">
+            <div style="color: white;">Rechazar</div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <div class="row">
+        <div class="col-sm-12" align="center">
+          <app-usuario
+            [nombre]="'kevin carate'"
+            [imagen]="'assets/perfil1.png'"
+            [estado]="false"
+          >
+          </app-usuario>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-2 border">
+      <div class="row">
+        <div class="row">
+          <div class="col-sm-12" align="center">
+            <h4>ITEM DE PETICION</h4>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-12" [align]="'right'">
+            <app-medicamento
+              [nombre]="'Ibuprofeno'"
+              [imagen]="'assets/perfil1.png'"
+              [estado]="false"
+              [estado2]="false"
+            >
+            </app-medicamento>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <h1 align="center" style="vertical-align: top"><br><=> </h1>
+    </div>
+    <div class="col-sm-2 border">
+      <div class="row">
+        <div class="row">
+          <div class="col-sm-12" align="center">
+            <h4>ITEM DE PETICION</h4>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-12" [align]="'right'">
+            <app-medicamento
+              [nombre]="'Ibuprofeno'"
+              [imagen]="'assets/perfil1.png'"
+              [estado]="false"
+              [estado2]="false"
+            >
+            </app-medicamento>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3"></div>
+
+  </div>
+</div>

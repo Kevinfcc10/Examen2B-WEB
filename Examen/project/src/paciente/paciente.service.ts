@@ -1,6 +1,6 @@
 import {Component} from "@nestjs/common";
 import {InjectRepository} from "@nestjs/typeorm";
-import {Equal, Like, Repository} from "typeorm";
+import {Equal, Like, Not, Repository} from "typeorm";
 import {PacienteEntity} from "./paciente.entity";
 import {UsuarioData} from "../usuario/usuario.data";
 import {UsuarioEntity} from "../usuario/usuario.entity";
@@ -16,12 +16,6 @@ export class PacienteService {
         private readonly pacienteRepository: Repository<PacienteEntity>
     ){}
     pacientes: Paciente[] = [];
-
-    //Metodo Listar Todos los paciente
-    async listarPaciente(): Promise<PacienteEntity[]>{
-        //console.log(await this.pacienteRepository.find());
-        return (await this.pacienteRepository.find());
-    }
 
     //Metodo Crear pacientes
     crearPaciente(paciente: Paciente){
@@ -56,31 +50,46 @@ export class PacienteService {
         }
     }
 
+    //Metodo Listar Todos los paciente, menos los pacientes de un determinado usuario
+    async listarPacienteOtrosUsuarios(id:number): Promise<PacienteEntity[]>{
+        return (await this.pacienteRepository.find({
+            where:{usuarioFK:Not(Equal(id))}
+        }));
+    }
 
-    //Metodo pacientes por usuario
+    //Metodo Listar Todos los Id de los pacientes, menos los pacientes de un determinado usuario
+    async listarIdsPacienteOtrosUsuarios(id:number): Promise<PacienteEntity[]>{
+        return (await this.pacienteRepository.find({
+            select:["id_paciente"],
+            where:{usuarioFK:Equal(id)}
+        }));
+    }
+
+    //Obtener un determinado paciente
+    async obtenerPacientesPorId(idPac:number): Promise<PacienteEntity[]>{
+        return (await this.pacienteRepository.find({
+            id_paciente:Equal(idPac)}));
+    }
+
+    //obtener pacientes mediante el operador like y que no sean de un determinado usuario
+    async buscarPacienteLike(name: string, id:number): Promise<PacienteEntity[]> {
+        //console.log(await this.pacienteRepository.find({nombres:Like('%'+name+'%')}));
+        return (await this.pacienteRepository.find({
+            nombres:Like('%'+name+'%'), usuarioFK:Not(Equal(id))
+        }));
+    }
+
+    //Metodo pacientes de un determinado usuario
     async obtenerPacientesPorUsuario(idUser:number): Promise<PacienteEntity[]>{
         return (await this.pacienteRepository.find({usuarioFK:Equal(idUser)}));
     }
 
-    async buscarPacienteLike(name: string): Promise<PacienteEntity[]> {
-        console.log(await this.pacienteRepository.find({nombres:Like('%'+name+'%')}));
-        return (await this.pacienteRepository.find({nombres:Like('%'+name+'%')}));
+    //Metodo Listar Todos los paciente
+    async findAll(): Promise<PacienteEntity[]>{
+        //console.log(await this.pacienteRepository.find());
+        return (await this.pacienteRepository.find());
     }
 
-    /*
-    //Metodo editar un paciente
-    editarUno(idPac, nombrePac, apellidoPac, fechaPac, hijosPac, tieneSeguroPac){
-        let pacienteActualizado = this.obtenerUno(idPac);
-
-        pacienteActualizado.nombres = nombrePac;
-        pacienteActualizado.apellidos = apellidoPac;
-        pacienteActualizado.fechaNacimiento = fechaPac;
-        pacienteActualizado.hijos = hijosPac;
-        pacienteActualizado.tieneSeguro = tieneSeguroPac;
-
-        return pacienteActualizado;
-    }
-*/
 }
 
 

@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-2">
+      <div class="row">
+        <div class="col-sm-12" align="center">
+          <app-usuario
+            [nombre]="'kevin carate'"
+            [imagen]="'assets/perfil1.png'"
+            [estado]="false"
+          >
+          </app-usuario>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <h1 style="color: orange; vertical-align: center; text-align: center" ><br>EN ESPERA</h1>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-2 border">
+      <div class="row">
+        <div class="row">
+          <div class="col-sm-12" align="center">
+            <h4>ITEM DE PETICION</h4>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-12" [align]="'right'">
+            <app-medicamento
+              [nombre]="'Ibuprofeno'"
+              [imagen]="'assets/perfil1.png'"
+              [estado]="false"
+              [estado2]="false"
+            >
+            </app-medicamento>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <h1 align="center" style="vertical-align: top"><br><=> </h1>
+    </div>
+    <div class="col-sm-2 border">
+      <div class="row">
+        <div class="row">
+          <div class="col-sm-12" align="center">
+            <h4>ITEM DE PETICION</h4>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-12" [align]="'right'">
+            <app-medicamento
+              [nombre]="'Ibuprofeno'"
+              [imagen]="'assets/perfil1.png'"
+              [estado]="false"
+              [estado2]="false"
+            >
+            </app-medicamento>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3"></div>
+
+  </div>
+</div>

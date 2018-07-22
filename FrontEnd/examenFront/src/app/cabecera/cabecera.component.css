@@ -1,0 +1,8 @@
+.borde{
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #fff;
+}
+.borde:hover{
+  border-color: darkgrey;
+}

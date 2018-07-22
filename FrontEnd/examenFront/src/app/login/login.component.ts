@@ -2,6 +2,7 @@ import {Component, Input, OnInit, Output} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {HomeComponent} from "../home/home.component";
+import {UsuarioService} from "../servicios/usuario.service";
 
 @Component({
   selector: 'app-login',
@@ -11,11 +12,9 @@ import {HomeComponent} from "../home/home.component";
 export class LoginComponent implements OnInit {
 
   constructor(private _httpClient: HttpClient,
-              private _router: Router,
-              private  home: HomeComponent
+              private _router: Router
   ) {
   }
-
   password = '';
   user = '';
   usuario;
@@ -25,7 +24,7 @@ export class LoginComponent implements OnInit {
     if (this.user.length === 0 || this.password.length === 0) {
       console.log('ingrese correctamente los valores')
     } else {
-      const observableUsuario$ = this._httpClient.get('http://localhost:1337/Usuario/' + this.user + '&' + this.password);
+      let observableUsuario$ = this._httpClient.get('http://localhost:1337/Usuario/loginUsuario/' + this.user + '&' + this.password);
       observableUsuario$.subscribe(
         results => {
           //console.log(results);
@@ -34,8 +33,8 @@ export class LoginComponent implements OnInit {
             console.log('no se obtuvo el id del usuario');
           }
           else {
-            console.log(this.usuario[0].id_usuario);
-            //this.home.obtenerDatosUsuario(this.usuario[0].id_usuario);
+            UsuarioService.userLogin = this.usuario[0].id_usuario;
+            console.log('El id del usuario logueado es:  ' + UsuarioService.userLogin);
             this._router.navigate(['/home']);
           }
         },

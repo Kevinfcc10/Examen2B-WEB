@@ -17,6 +17,10 @@ import { MedicamentoComponent } from './medicamento/medicamento.component';
 import {MedicamentoService} from "./servicios/medicamento.service";
 import {UsuarioService} from "./servicios/usuario.service";
 import {PacienteService} from "./servicios/paciente.service";
+import { CabeceraComponent } from './cabecera/cabecera.component';
+import {TransferenciaService} from "./servicios/transferencia.service";
+import { PeticionEsperaComponent } from './peticion-espera/peticion-espera.component';
+import { PeticionAceptarComponent } from './peticion-aceptar/peticion-aceptar.component';
 
 
 @NgModule({
@@ -30,6 +34,9 @@ import {PacienteService} from "./servicios/paciente.service";
     UsuarioComponent,
     PacienteComponent,
     MedicamentoComponent,
+    CabeceraComponent,
+    PeticionEsperaComponent,
+    PeticionAceptarComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,7 @@ import {PacienteService} from "./servicios/paciente.service";
       }
     )
   ],
-  providers: [HomeComponent, MedicamentoService, UsuarioService, PacienteService],
+  providers: [HomeComponent, MedicamentoService, UsuarioService, PacienteService, TransferenciaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,6 +12,9 @@ import {UsuarioEntity} from "./usuario/usuario.entity";
 import {MedicamentoEntity} from "./medicamentos/medicamento.entity";
 import {UsuarioService} from "./usuario/usuario.service";
 import {UsuarioController} from "./usuario/usuario.controller";
+import {TransferenciaEntity} from "./transferencia/transferencia.entity";
+import {TransferenciaController} from "./transferencia/transferencia.controller";
+import {TransferenciaService} from "./transferencia/transferencia.service";
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -34,9 +37,10 @@ import {UsuarioController} from "./usuario/usuario.controller";
           PacienteEntity,
           UsuarioEntity,
           MedicamentoEntity,
+          TransferenciaEntity
       ]),
   ],
-  controllers: [AppController, PacienteController, MedicamentoController, AutorizacionController, UsuarioController],
-  providers: [AppService, PacienteService, MedicamentoService, UsuarioService],
+  controllers: [AppController, PacienteController, MedicamentoController, AutorizacionController, UsuarioController, TransferenciaController],
+  providers: [AppService, PacienteService, MedicamentoService, UsuarioService, TransferenciaService],
 })
 export class AppModule {}

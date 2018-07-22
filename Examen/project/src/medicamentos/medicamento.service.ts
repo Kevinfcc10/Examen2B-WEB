@@ -1,26 +1,23 @@
-import {Component} from "@nestjs/common";
+import {Component, Post} from "@nestjs/common";
 import {InjectRepository} from "@nestjs/typeorm";
 import {MedicamentoEntity} from "./medicamento.entity";
-import {Like, Repository} from "typeorm";
-import {PacienteEntity} from "../paciente/paciente.entity";
+import {createQueryBuilder, Equal, getRepository, In, Like, Not, Repository} from "typeorm";
 import {MedicamentoData} from "./medicamento.data";
+import {PacienteEntity} from "../paciente/paciente.entity";
+import {PacienteService} from "../paciente/paciente.service";
 
 @Component()
 export class MedicamentoService {
 
     constructor(
         @InjectRepository(MedicamentoEntity)
-        private readonly medicamentoRepository: Repository<MedicamentoEntity>
+        private readonly medicamentoRepository: Repository<MedicamentoEntity>,
+        private  pacienteService: PacienteService
+
     ){}
     medicamentos: Medicamento[] = [];
 
-    //Metodo Listar Todos los medicamentos
-    async  listarMedicamento(): Promise<MedicamentoEntity[]>{
-        //console.log(await this.pacienteRepository.find());
-        return (await this.medicamentoRepository.find());
-    }
-
-
+    //Metodo para crear un medicamento
     crearMedicamento(medicamento: Medicamento){
         const med = new MedicamentoEntity();
 
@@ -35,7 +32,7 @@ export class MedicamentoService {
 
         this.medicamentoRepository.save(med);
     }
-
+    //metodo para registrar los medicamentos quemados en la app
     crearTodosMedicamentos(){
         for (var indice in MedicamentoData){
             const med = new MedicamentoEntity();
@@ -52,40 +49,59 @@ export class MedicamentoService {
         }
     }
 
-    async buscarMedLike(name: string): Promise<MedicamentoEntity[]> {
 
-        return (await this.medicamentoRepository.find({nombre:Like('%'+name+'%')}));
+    //listar todos los medicamentos que no pertenecen a los pacientes de un determinado usuario
+    async  listarMedicamentoPacienteUsuario(idUser:number): Promise<MedicamentoEntity[]>{
+        /*let promise = Promise.resolve(this.pacienteService.listarIdsPacienteOtrosUsuarios(1));*/
+
+        const joinExample = await this.medicamentoRepository.createQueryBuilder("medicamento")
+            .innerJoin("medicamento.pacienteId", "med") //representa a la entidad paciente
+            .innerJoin("med.medicamentoId", "medPac") //representa a la entidad medicamento
+            .where( "med.usuarioFK != :id")
+            .setParameter("id", idUser)
+            .getMany();
+        //console.log(joinExample)
+        return (joinExample);
     }
 
 
+    //listar todos los medicamentos que no pertenecen a los pacientes de un determinado usuario con busqueda con Like
+    async  busquedaLike(name:string,idUser:number): Promise<MedicamentoEntity[]>{
 
+        const joinMedicamentoPaciente = await this.medicamentoRepository.createQueryBuilder("medicamento")
+            .innerJoin("medicamento.pacienteId", "pac") //representa a la entidad paciente
+            .innerJoin("pac.medicamentoId", "med") //representa a la entidad medicamento
+            .where("pac.usuarioFK != :id",{id:idUser})
+            .andWhere("medicamento.nombre like :names", {names: '%' +  name + '%' })
+            .getMany();
+        //console.log(joinMedicamentoPaciente)
+        /*var data = await  getRepository(MedicamentoEntity)
+            .createQueryBuilder("med")
+            .where("med.nombre like :names", {names: '%' +  name + '%' })
+            .getMany();*/
 
+        return (joinMedicamentoPaciente);
+    }
 
+    //Metodo para buscar el/los medicamentos por un determinado paciente
+    async buscarMedPac(id: number): Promise<MedicamentoEntity[]> {
+        return (await this.medicamentoRepository.find({pacienteId:Equal(id)}));
+    }
 
-
-
-
+    //Metodo para buscar el/los medicamentos del usuario logeado
+    async  listarMedicamentoUsuario(idUser:number): Promise<MedicamentoEntity[]>{
+        const joinExample = await this.medicamentoRepository.createQueryBuilder("medicamento")
+            .innerJoin("medicamento.pacienteId", "med") //representa a la entidad paciente
+            .innerJoin("med.medicamentoId", "medPac") //representa a la entidad medicamento
+            .where( "med.usuarioFK = :id")
+            .setParameter("id", idUser)
+            .getMany();
+        return (joinExample);
+    }
 
     //Metodo obtener un medicamento
-    obtenerUno(medicamentoID){
-
-        console.log(this.medicamentos[medicamentoID]);
-        return this.medicamentos[medicamentoID];
-    }
-
-    //Metodo editar un medicamento
-    editarUno(medicamentoID, gramosAIngerir, nombre, composicion, usadoPara, fechaCaducidad, numeroPastillas, pacienteId){
-        let medicamentoActualizado = this.obtenerUno(medicamentoID);
-
-        medicamentoActualizado.gramosAIngerir = gramosAIngerir;
-        medicamentoActualizado.nombre = nombre;
-        medicamentoActualizado.composicion = composicion;
-        medicamentoActualizado.usadoPara = usadoPara;
-        medicamentoActualizado.fechaCaducidad = fechaCaducidad;
-        medicamentoActualizado.numeroPastillas = numeroPastillas;
-        medicamentoActualizado.pacienteIdIdPaciente = pacienteId;
-
-        return medicamentoActualizado;
+    async obtenerUno(idMed:number): Promise<MedicamentoEntity[]>{
+        return (await this.medicamentoRepository.find({id_medicamento:Equal(idMed)}))
     }
 
 }

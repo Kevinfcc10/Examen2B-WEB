@@ -1,35 +1,103 @@
 <div class="row">
+  <div class="col sm-10"></div>
+  <div class="col sm-2" >
+    <app-cabecera></app-cabecera>
+  </div>
+</div>
+
+
+<div class="row">
   <div class="col-sm-12" align="center">
     <h1>PETICION DE TRANSFERENCIA</h1>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-1" align="center">
+  <div class="col-sm-4" align="center">
     <h3>USUARIO</h3>
   </div>
-  <div class="col-sm-5"></div>
-  <div class="col-sm-1" align="center">
-    <h3>PAPA</h3>
-  </div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-4" align="center"><h3>PAPA</h3></div>
 </div>
 
 <div class="row">
-  <div class="col-sm-2">
-    <app-medicamento>
-      [texto]= ""
-      [imagen]= ""
-    </app-medicamento>
+
+
+  <div class="col-sm-4">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10 disabled" *ngFor="let user of usuarios ; let indice=index"  align="center">
+        <div *ngIf="indice<1">
+          <app-usuario
+            [nombre]="user.nombre_usuario"
+            [imagen]="user.img_usuario"
+            [idUser]="user.id_usuario"
+          >
+          </app-usuario>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-3"></div>
-  <div class="col-sm-7">
-  <h1>hola</h1>
+
+  <div class="col-sm-2"></div>
+
+  <div class="col-sm-4">
+
+    <div class="row">
+      <div class="col-sm-12 disabled" *ngFor="let pac of pacientesAux ; let indice=index">
+        <div *ngIf="indice<1">
+          <app-paciente
+            [nombre]="pac.nombres "
+            [apellido]= "pac.apellidos"
+            [idPac]="pac.id_paciente"
+            [imagen]="pac.img_paciente"
+          >
+          </app-paciente>
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" *ngIf="!estadoContainer">
+      <div class="row">
+        <div class="col-sm-2">
+          <button class="btn btn-primary float-right"   (click)="disminuirContador1()">Anterior</button>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+          <button class="btn btn-primary " (click)="seleccion()">Seleccionar</button>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2">
+          <button class="btn btn-primary float-left" (click)="aumentarContador1()">Siguiente</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 
 <br>
-<div class="row">
-  <div class="col-sm-4" >
-    <h3>modelos hijo - 12</h3>
+<div class="container-fluid" *ngIf="estadoContainer">
+  <div class="row">
+    <div class="col-sm-4"><h4>Hijos - {{numeroHijos}}</h4></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-2" *ngFor="let med of medicamentosAux ; let indice=index">
+          <div *ngIf="indice<=3">
+            <app-medicamento
+              [nombre]="med.nombre"
+              [imagen]="med.img_med"
+              [idMedicamento]="med.id_medicamento"
+            >
+            </app-medicamento>
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

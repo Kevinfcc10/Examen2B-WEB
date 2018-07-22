@@ -10,8 +10,8 @@ export class MedicamentoController {
 
     }
 
-    //Body params
-    @Post('registrar')
+    //Body params - registrar un medicamento en la app
+    @Post('registrarMedicamentos')
     crearMedicamento(@Body(new MedicamentoPipe(MEDICAMENTO_SCHEMA)) bodyParams, @Res () response){
         const medicamento1 = new  Medicamento(
             bodyParams.gramosAIngerir,
@@ -29,15 +29,17 @@ export class MedicamentoController {
 
     }
 
+    //registrar los medicamento quemados en la app
     @Get('crearMedicamentos')
     registrarAllMedicamentos(@Res () response, @Req () request){
         this.medicamentoService.crearTodosMedicamentos()
         return response.status(202).send('Medicamentos Creados');
     }
 
-    @Get('mostrarMedicamentos')
-    listarTodosLosMedicamentos(@Res () response, @Req () request){
-        var promise = Promise.resolve(this.medicamentoService.listarMedicamento())
+    //listar todos los medicamentos que no pertenecen a los pacientes de un determinado usuario
+    @Get('mostrarMedicamentos/:idUser')
+    listarTodosLosMedicamentos(@Res () response, @Req () request, @Param() params){
+        var promise = Promise.resolve(this.medicamentoService.listarMedicamentoPacienteUsuario(params.idUser))
 
         promise.then(function (value) {
             if(value.length === 0){
@@ -52,11 +54,11 @@ export class MedicamentoController {
         });
     }
 
-
-    @Get('/:name')
+    //busqueda con el operador Like de el o los medicamentos que no pertenecen a los pacientes de un determinado usuario
+    @Get('busquedaMedicamentos/:name&:id')
     mostrarMedLike(@Res () response, @Req () request, @Param() params){
 
-        var promise = this.medicamentoService.buscarMedLike(params.name);
+        var promise = this.medicamentoService.busquedaLike(params.name,params.id);
         promise.then(function (value) {
             if(value.length === 0){
                 return response.send({
@@ -69,43 +71,52 @@ export class MedicamentoController {
         });
     }
 
-
-    @Get('/:id')
-    mostrarUnMedicamento(@Res () response, @Req () request, @Param() params){
-        let arregloMedicamento = this.medicamentoService.obtenerUno(params.id);
-        if(arregloMedicamento){
-            return response.send(arregloMedicamento);
-        } else{
-            console.log('no encontrado');
-            return response.status(400).send({
-                mensaje:'Medicamento no encontrado',
-                estado:HttpStatus.NOT_FOUND + ' Not found',
-                URL:request.originalUrl,
-            });
-        }
+    //busqueda de el/los medicamentos de un determinado paciente
+    @Get('listarMedicamentos/paciente/:id')
+    mostrarMedicamentoPaciente(@Res () response, @Req () request, @Param() params){
+        var promise = this.medicamentoService.buscarMedPac(params.id);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el medicamento',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
     }
 
-    @Put('/:id')
-    modificarMedicamento(@Res () response, @Req () request, @Param() params, @Body(new MedicamentoPipe(MEDICAMENTO_SCHEMA)) body){
-        let arregloMedicamento = this.medicamentoService.obtenerUno(params.id);
-        if(arregloMedicamento){
-            return response.send(
-                this.medicamentoService.editarUno(
-                    params.id,
-                    body.gramosAIngerir,
-                    body.nombre,
-                    body.composicion,
-                    body.usadoPara,
-                    body.fechaCaducidad,
-                    body.numeroPastillas,
-                    body.pacienteId,
-                ));
-        } else{
-            return response.send({
-                mensaje:'Medicamento no encontrado. No se puede modificar',
-                estado:HttpStatus.NOT_FOUND + ' Not found',
-                url:request.path,
-            });
-        }
+    //busqueda de el/los medicamentos del usuario logeado
+    @Get('listarMedicamentos/usuario/:id')
+    mostrarMedicamentoUsuario(@Res () response, @Req () request, @Param() params){
+        var promise = this.medicamentoService.listarMedicamentoUsuario(params.id);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el medicamento',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
     }
+
+    //busqueda de un determinado medicamento.
+    @Get('medicamento/:id')
+    obtenerMedicamentoId(@Res () response, @Req () request, @Param() params){
+        var promise = this.medicamentoService.obtenerUno(params.id);
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No se encontro el medicamento',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }else{
+                return response.status(202).send(value);
+            }
+        });
+    }
+
 }

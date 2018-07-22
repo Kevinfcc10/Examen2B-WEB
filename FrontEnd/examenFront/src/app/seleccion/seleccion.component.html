@@ -1,6 +1,79 @@
 <div class="row">
-  <div class="col-sm-12">
-    <router-outlet></router-outlet>
-    <h1>Hola mundo</h1>
+  <div class="col sm-10"></div>
+  <div class="col sm-2" >
+    <app-cabecera></app-cabecera>
   </div>
 </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12" align="center"><h2>SELECCION DE TRANSFERENCIA</h2></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="row">
+        <div class="col-sm-12" align="center">
+          <h4>USUARIO</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12" align="center">
+          <app-usuario
+            [nombre]="nombreUser"
+            [imagen]="img_user"
+            [estado]="false"
+          >
+          </app-usuario>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-2"></div>
+    <div class="col-sm-3">
+      <div class="row">
+        <div class="col-sm-12" align="center">
+          <h4>ITEM DE PETICION</h4>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-12" [align]="'right'" *ngFor="let med of medicamentosSel">
+          <app-medicamento
+            [nombre]="med.nombre"
+            [imagen]="med.img_med"
+            [estado]="false"
+            [estado2]="false"
+          >
+          </app-medicamento>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br><br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3" align="center">
+        <h3>Modelos Hijo - {{numeroHijos}}</h3>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let med of medicamentosAux ; let indice=index" [align]="'right'">
+          <app-medicamento
+            [nombre]="med.nombre"
+            [imagen]="med.img_med"
+            [idMedicamentoInter]="med.id_medicamento"
+            [estado]="false"
+            [estado2]="true"
+          >
+          </app-medicamento>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
