@@ -32,10 +32,23 @@ export class TransferenciaService {
         transfer.idUsuarioEspera = transferencia.idEspera;
         transfer.idMedicamento1 = transferencia.idMed1;
         transfer.idMedicamento2 = transferencia.idMed2;
+        transfer.idPaciente1 = transferencia.idPac1;
+        transfer.idPaciente2 = transferencia.idPac2;
         transfer.estadoPeticion = transferencia.est;
 
         this.transferenciaRepository.save(transfer);
         console.log(transfer)
+    }
+
+    //metodo para actualizar el estado de una peticion
+    async updateEstado(idTrans:number, estadoPet:string):  Promise<string>{
+        await this.transferenciaRepository.createQueryBuilder()
+            .update("transferencia")
+            .set({estadoPeticion:estadoPet})
+            .where('id_transferencia = :id',{id:idTrans})
+            .execute()
+
+        return 'Realizado con exito'
     }
 
 
@@ -47,6 +60,8 @@ export class Transferencia {
         public idEspera:number,
         public idMed1:number,
         public idMed2:number,
+        public idPac1:number,
+        public idPac2:number,
         public est:string,
     ){};
 }

@@ -122,29 +122,21 @@ export  class PacienteController {
         });
     }
 
-    /*
-    @Put('/:id') //Uso pipe
-    modificarPaciente(@Res () response, @Req () request, @Param() params, @Body(new PacientePipe(PACIENTE_SCHEMA)) body){
-        let arregloPaciente = this.pacienteService.obtenerUno(params.id);
-        if(arregloPaciente) {
-            return response.send(
-                this.pacienteService.editarUno(
-                    params.id,
-                    body.nombres,
-                    body.apellidos,
-                    body.fechaNacimiento,
-                    body.hijos,
-                    body.tieneSeguro
-                ));
-        } else{
-            return response.send({
-                mensaje:'Paciente no encontrado. No se puede modificar',
-                estado:HttpStatus.NOT_FOUND + ' Not found',
-                url:request.path,
-               //headers: request.headers,
-            });
-        }
+    //obtener paciente dado medicamento
+    @Get('idMedicamento/:id')
+    obtenerPacienteDadoMed(@Res () response, @Req () request, @Param() params){
+        var promise = Promise.resolve(this.pacienteService.obtenerPacientesPorMed(params.id));
+        promise.then(function (value) {
+            if(value.length === 0){
+                return response.send({
+                    mensaje:'No existe ningun paciente',
+                    estado: HttpStatus.NOT_FOUND + ' Not found',
+                });
+            }
+            else{
+                return response.status(202).send(value);
+            }
+        });
     }
-    */
 }
 

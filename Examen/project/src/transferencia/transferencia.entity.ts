@@ -13,6 +13,10 @@ export class TransferenciaEntity {
     @Column()
     idMedicamento2:number;
     @Column()
+    idPaciente1:number
+    @Column()
+    idPaciente2:number
+    @Column()
     estadoPeticion:string;
 
 }

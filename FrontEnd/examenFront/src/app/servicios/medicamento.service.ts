@@ -1,6 +1,5 @@
 import {Injectable} from "@angular/core";
-import {MedicamentosInterface} from "../interfaces/medicamentos.interface";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 
 @Injectable()
 export class MedicamentoService {
@@ -36,5 +35,16 @@ export class MedicamentoService {
     return this.consulta.get('http://localhost:1337/Medicamento/medicamento/'+idMed)
   }
 
+  //actualizar el paciente al que pertenece un medicamento
+  updatePaciente(idMed:number, idPac:number){
+    let headers  = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+    let body = new HttpParams();
+
+    body = body.set('idMed', idMed.toString());
+    body = body.set('idPac', idPac.toString());
+
+    return this.consulta.post('http://localhost:1337/Medicamento/update/', body,{headers: headers}).subscribe();
+
+  }
 
 }

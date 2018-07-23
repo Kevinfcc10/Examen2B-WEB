@@ -104,6 +104,16 @@ export class MedicamentoService {
         return (await this.medicamentoRepository.find({id_medicamento:Equal(idMed)}))
     }
 
+    //Actualizar el paciente de un medicamento
+    async updatePaciente(idMed:number, idPaciente:number): Promise<string>{
+        await this.medicamentoRepository.createQueryBuilder()
+            .update("medicamento")
+            .set({pacienteId:idPaciente})
+            .where("id_medicamento = :id",{id: idMed})
+            .execute()
+
+        return 'Realizado con exito'
+    }
 }
 
 

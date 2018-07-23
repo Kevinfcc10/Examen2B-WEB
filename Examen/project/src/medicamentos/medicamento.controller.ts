@@ -119,4 +119,10 @@ export class MedicamentoController {
         });
     }
 
+    @Post('update/')
+    updatePaciente(@Res () response, @Req () request, @Body() bodyParams){
+
+        this.medicamentoService.updatePaciente(bodyParams.idMed, bodyParams.idPac);
+        return response.send('Peticion de transferencia Registrada');
+    }
 }

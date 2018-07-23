@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {UsuarioService} from "../servicios/usuario.service";
-import {MedicamentosInterface} from "../interfaces/medicamentos.interface";
 import {TransferenciaService} from "../servicios/transferencia.service";
 import {TransferenciaInterface} from "../interfaces/transferencia.interface";
-import {forEach} from "@angular/router/src/utils/collection";
+import {PacienteService} from "../servicios/paciente.service";
 
 @Component({
   selector: 'app-perfil',
@@ -33,7 +32,9 @@ export class PerfilComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
     if(UsuarioService.userLogin != 0){
+
 
       this.nombreUser = UsuarioService.usuarioLogin[0].nombre_usuario;
       this.img_user = UsuarioService.usuarioLogin[0].img_usuario;

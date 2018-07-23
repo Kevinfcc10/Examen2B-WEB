@@ -20,7 +20,9 @@ export class TransferenciaController {
             bodyParams.idUsuarioEspera,
             bodyParams.idMedicamento1,
             bodyParams.idMedicamento2,
-            bodyParams.estadoPeticion
+            bodyParams.estadoPeticion,
+            bodyParams.idPaciente1,
+            bodyParams.idPaciente2,
         );
 
         this.transferenciaService.registrarPeticionTransferencia(transfer);
@@ -35,11 +37,23 @@ export class TransferenciaController {
             bodyParams.idUsuarioEspera,
             bodyParams.idMedicamento1,
             bodyParams.idMedicamento2,
+            bodyParams.idPaciente1,
+            bodyParams.idPaciente2,
             bodyParams.estadoPeticion,
         );
         this.transferenciaService.registrarPeticionTransferencia(transfer);
         return response.send('Peticion de transferencia Registrada');
     }
+
+    //metodo apra actualizar el estado de una peticion Aceptado o Rechazado
+
+    @Post('updateEstado')
+    updateEstado(@Body() bodyParams, @Res () response){
+        this.transferenciaService.updateEstado(bodyParams.idTrans,bodyParams.estadoPet);
+
+        return response.send('Peticion de Actualizacion de transferencia Registrada');
+    }
+
 
     //metodo para encontrar todas las transferencias en espera del usuario logueado  /***********Consumiendo***********/
     @Get('transferenciaEspera/:idUser')

@@ -5,7 +5,8 @@ import {PacieneInterface} from "../interfaces/paciene.interface";
 @Injectable()
 export class PacienteService{
 
-  public static  pacienteSelect : PacieneInterface;
+  public static  pacienteSelect1 : number =0;
+  public static  pacienteSelect2 : number =0;
 
   constructor(private consulta: HttpClient) {
   }
@@ -28,6 +29,11 @@ export class PacienteService{
   //obtener pacientes por un determinado usuario
   obtenerPacientesPorUsuario(idUser:number){
     return this.consulta.get('http://localhost:1337/Paciente/obtenerPacientePorUsuario/'+idUser)
+  }
+
+  //obtenerpaciente por el id del medicamento
+  obtenerPaciente(idMed:number){
+    return this.consulta.get('http://localhost:1337/Paciente/idMedicamento/'+idMed)
   }
 
 }

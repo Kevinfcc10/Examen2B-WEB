@@ -71,6 +71,18 @@ export class PacienteService {
             id_paciente:Equal(idPac)}));
     }
 
+
+    //Obtener un paciente dado medicamento
+    async obtenerPacientesPorMed(idMed:number): Promise<PacienteEntity[]>{
+        const joinExample = await this.pacienteRepository.createQueryBuilder('pac')
+            .innerJoin("pac.medicamentoId","med")
+            .where("med.id_medicamento = :id")
+            .setParameter("id", idMed)
+            .getMany()
+        console.log(joinExample)
+        return (joinExample);
+    }
+
     //obtener pacientes mediante el operador like y que no sean de un determinado usuario
     async buscarPacienteLike(name: string, id:number): Promise<PacienteEntity[]> {
         //console.log(await this.pacienteRepository.find({nombres:Like('%'+name+'%')}));
@@ -89,7 +101,6 @@ export class PacienteService {
         //console.log(await this.pacienteRepository.find());
         return (await this.pacienteRepository.find());
     }
-
 }
 
 

@@ -4,6 +4,10 @@ import {MedicamentoService} from "../servicios/medicamento.service";
 import {PeticionComponent} from "../peticion/peticion.component";
 import {UsuarioService} from "../servicios/usuario.service";
 import {UsuarioInterface} from "../interfaces/usuario.interface";
+import {PacienteService} from "../servicios/paciente.service";
+import {PacieneInterface} from "../interfaces/paciene.interface";
+import {Router} from "@angular/router";
+import {TransferenciaService} from "../servicios/transferencia.service";
 
 @Component({
   selector: 'app-peticion-aceptar',
@@ -28,9 +32,14 @@ export class PeticionAceptarComponent implements OnInit {
   imagenItem2 = '';
   MedicamentosItem2: MedicamentosInterface
 
+  paciente: Array<PacieneInterface>
+
   constructor(
     private medicamentoService: MedicamentoService,
     private usuarioService: UsuarioService,
+    private servicioPaciente : PacienteService,
+    private transferService: TransferenciaService,
+    private _router: Router
     ) {}
 
   ngOnInit() {
@@ -41,6 +50,7 @@ export class PeticionAceptarComponent implements OnInit {
           this.MedicamentosItem1 = result;
           this.nombreItem1 = this.MedicamentosItem1[0].nombre
           this.imagenItem1 = this.MedicamentosItem1[0].img_med
+          console.log(this.MedicamentosItem1)
         }
       );
 
@@ -63,12 +73,34 @@ export class PeticionAceptarComponent implements OnInit {
   }
 
   AceptarTransferencia(){
-    //this.selecciono.emit( this.nombre);
-    console.log('Acepto transferencia ' + this.nombreItem2 + ' con id: ' + this.idSeleccionado2)
-    //this._router.navigate(['/peticion']);
+
+    const observablePac2$ = this.servicioPaciente.obtenerPaciente(this.MedicamentosItem1[0].id_medicamento);
+    observablePac2$.subscribe(
+      (results:any) => {
+        this.paciente = results;
+        console.log("los valores son : " +this.MedicamentosItem2[0].id_medicamento + "    " +this.paciente[0].id_paciente)
+        this.medicamentoService.updatePaciente(this.MedicamentosItem2[0].id_medicamento,this.paciente[0].id_paciente);
+      },
+    )
+
+    const observablePac1$ = this.servicioPaciente.obtenerPaciente(this.MedicamentosItem2[0].id_medicamento);
+    observablePac1$.subscribe(
+      (results:any) => {
+        this.paciente = results;
+        console.log("los valores son: " + this.MedicamentosItem1[0].id_medicamento + " " + this.paciente[0].id_paciente)
+        this.medicamentoService.updatePaciente(this.MedicamentosItem1[0].id_medicamento,this.paciente[0].id_paciente);
+      },
+    )
+
+
+    this.transferService.updateEstado(this.idAceptarRechazar,'aceptado')
+
+    this._router.navigate(['/home']);
   }
 
-  RechazarTransferencia(){
-    console.log('Rechazo transferencia ' + this.nombreItem2 + ' con id: ' + this.idSeleccionado2)
+  RechazarTransferencia() {
+
+    this.transferService.updateEstado(this.idAceptarRechazar,'rechazado')
+    this._router.navigate(['/home']);
   }
 }

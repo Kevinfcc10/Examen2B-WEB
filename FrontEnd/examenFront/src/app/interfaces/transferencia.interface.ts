@@ -4,5 +4,7 @@ export interface TransferenciaInterface {
   idUsuarioEspera:number;
   idMedicamento1:number;
   idMedicamento2:number;
+  idPaciente1:number;
+  idPaciente2:number;
   estadoPeticion:string;
 }
